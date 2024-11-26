@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipo 1</title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
 </head>
 <body>
     <a-scene>
-        <a-sky color="#b4e6f9"> </a-sky>
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-        <a-text value="Galeria Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="#4d113b" negate="false" scale="2 2 1" position="-2.3186 3.2599 -4"></a-text>
-        <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="#4d113b" negate="false" scale="2 2 1" position="-1.45212 2.74624 -4"></a-text>
-        <a-text value="Ana Mendieta" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="#4d113b" negate="false" scale="2 2 1" position="-2.66958 2 -4"></a-text>
+        <a-entity environment= "preset: egypt; dressingAmount: 500; skyType:gradient; skyColor:#f3a76d; horizonColor:#997f87; 
+        lighting:distant; lightPosition: 0 1.65 -1; fog: 0.75; flatShading: false; playArea: 1; ground:noise; 
+        groundYScale:5; groundTexture:walkernoise; groundColor: #091703; groundColor2:#040d00; dressing:trees; 
+        dressingColor:#092006; dressingScale: 1; dressingVariance:20 20 20; dressingUniformScale: true; 
+        dressingOnPlayArea: 0; grid:none;gridColor:#c5a543; shadow: false"></a-entity>
+        <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
+        color="black" negate="false" scale="3 3 2" position="-2.3186 3.2599 -4"></a-text>
+        <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" 
+        color="black" negate="false" scale="4 4 4" position="-1.45212 2.6 -4"></a-text>
+        <a-text value="Ana Mendieta" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
+        color="black" negate="false" scale="2 2 1" position="-3.1065 2 -4"></a-text>
+        <a-text value="Maris Bustamante" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png"
+        color="black" negate="false" scale="2 2 1" position="0.26785 1.979 -4.064"></a-text>
+        <a-text value="Mónica Mayer" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png"
+        color="black" negate="false" scale="2 2 1" position="-3.19015 1.3238 -4.02641"></a-text>
+        <a-text value="María Eugenia Chellet" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png"
+        color="black" negate="false" scale="2 2 1" position="0.28536 1.29988 -4.08845"></a-text>
+
+    
+        
     </a-scene>
 </body>
 </html>
