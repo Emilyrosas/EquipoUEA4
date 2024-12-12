@@ -10,11 +10,14 @@
 </head>
 <body>
     <a-scene>
+      <!--entorno-->
         <a-entity environment= "preset: forest; dressingAmount: 100; skyType:gradient; skyColor:#f3a76d; horizonColor:#997f87; 
         lighting:distant; lightPosition: 0 1.65 -1; fog: 0.75; flatShading: false; playArea: 1; ground:hills; 
         groundYScale:5; groundTexture:walkernoise; groundColor: #091703; groundColor2:#040d00; dressing:trees; 
         dressingColor:#092006; dressingScale: 1; dressingVariance:20 20 20; dressingUniformScale: true; 
         dressingOnPlayArea: 0; grid:none;gridColor:#c5a543; shadow: false"></a-entity>
+
+        <!--Textos-->
         
         <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
         color="black" negate="false" scale="3 3 2" position="-2.3186 3.2599 -4"></a-text>
@@ -38,7 +41,7 @@
         
         
        
-
+<!--mesh-->
        <a-assets>
         <a-asset-item id="navmeshprueba" src="modelados/navmeshprueba.glb"></a-asset-item>
         <a-asset-item id="estructura" src="modelados/galeria_estructura.glb"></a-asset-item>
@@ -64,6 +67,26 @@
             gltf-model="#navmeshprueba"></a-entity>
 
             <a-entity gltf-model="#estructura" position="0 0 21.14831" scale="0.5 0.5 0.5" ></a-entity>
+
+<!--texturas y pruebas-->
+
+        <a-entity geometry="primitive: box; height: 3.3; width: 0.8; depth: 0.1" material="src:assets\Texturas\mosaico_rosa_1.jpeg" position="0 1.5 -2.088"></a-entity>
+        <a-entity geometry="primitive: box; height: 3.3; width: 0.8; depth: 0.1" material="src:assets\Texturas\estrellas_verdes.jpeg" position="1 1.5 -2.088"></a-entity>
+        <a-entity geometry="primitive: box; height: 3.3; width: 0.8; depth: 0.1" material="src:assets\Texturas\marmol_rosa.jpg" position="2 1.5 -2.088"></a-entity>
+        <a-entity geometry="primitive: box; height: 3.3; width: 0.8; depth: 0.1" material="src:assets\Texturas\marmol_verde.jpeg" position="3 1.5 -2.088"></a-entity>
+
+        <a-entity position="2 1 30">
+            <!-- La caja -->
+            <a-box color="#de85a5" depth="0.1" height="1" width="3"></a-box>
+            <!-- El texto dentro de la caja -->
+            <a-text value="Floralis" negate="false"
+                    color="#000000" 
+                    align="center" 
+                    width="25"
+                    position="0 0 0.06"
+                    font="font\alketa-msdf.json" 
+                    font-image="font\alketa.png"></a-text>
+          </a-entity>
 
     </a-scene>
 </body>
