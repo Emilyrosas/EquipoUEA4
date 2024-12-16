@@ -11,7 +11,7 @@
 <body>
     <a-scene>
       <!--entorno-->
-        <a-entity environment= "preset: forest; dressingAmount: 100; skyType:gradient; skyColor:#f3a76d; horizonColor:#997f87; 
+        <a-entity environment= "preset: forest; dressingAmount: 70; skyType:gradient; skyColor:#f3a76d; horizonColor:#997f87; 
         lighting:distant; lightPosition: 0 1.65 -1; fog: 0.75; flatShading: false; playArea: 1; ground:hills; 
         groundYScale:5; groundTexture:walkernoise; groundColor: #091703; groundColor2:#040d00; dressing:trees; 
         dressingColor:#092006; dressingScale: 1; dressingVariance:20 20 20; dressingUniformScale: true; 
@@ -19,9 +19,9 @@
 
         <!--Textos-->
         <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
-        color="black" negate="false" scale="3 3 2" position="-2.3186 3.2599 -4"></a-text>
-        <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" 
-        color="black" negate="false" scale="8 8 8" position="-1.53379 5.64802 48.78568"></a-text>
+        color="black" negate="false" scale="4 4 2" position="1.57258 13.98333 63.22804"></a-text>
+        <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="black" negate="false" 
+        scale="15 15 8" position="1.54052 12.29576 63.25107"></a-text>
         <a-text value="Ana Mendieta" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
         color="black" negate="false" scale="2 2 1" position="-3.1065 2 -4"></a-text>
         <a-text value="Maris Bustamante" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png"
@@ -30,16 +30,15 @@
         color="black" negate="false" scale="2 2 1" position="-3.19015 1.3238 -4.02641"></a-text>
         <a-text value="María Eugenia Chellet" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png"
         color="black" negate="false" scale="2 2 1" position="0.28536 1.29988 -4.08845"></a-text>
-        <a-text value="Esta exposición es un conjunto de obras de artistas mujeres latinoamericanas que desafían y cuestionan
-         las convicciones tradicionales establecidas dentro de la sociedad latinoamericana conservadora, que limitan y violentan 
-         la identidad de las mujeres. Se invita a la reflexión individual sobre qué elementos definen a las mujeres esto a través 
-         del diálogo entre los roles de género, la sexualidad, la transición y la violencia." font="font\Mangiola-Regular-msdf.json" 
-         font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="2 2 1" position="1.05647 3.84214 39.1337" wrapCount="40"></a-text>
+        <a-entity text="value: Herederas del cambio; color:black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false;" position="1.389 13.079 51.519" scale="15 15 1" rotation="0 83.39171525011079 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Esta exposición es un conjunto de obras de artistas mujeres latinoamericanas que desafían y cuestionan las convicciones tradicionales establecidas dentro de la sociedad latinoamericana conservadora, 
+        que limitan y violentan la identidad de las mujeres. Se invita a la reflexión individual sobre qué elementos definen a las mujeres esto a través  del diálogo entre los roles de género, la sexualidad, la transición y la violencia." position="1.17431 7.577 53.05243" scale="15 15 1" rotation="0 83.39171525011079 0"></a-entity>
+
          
        
 <!--assets-->
        <a-assets>
-        <a-asset-item id="navmeshprueba" src="modelados/navmeshprueba.glb"></a-asset-item>
+        <a-asset-item id="meshfinal" src="modelados/meshfinal.glb"></a-asset-item>
         <a-asset-item id="estructura" src="modelados/galería_versión1.glb"></a-asset-item>
     </a-assets>
 
@@ -47,20 +46,22 @@
   <a-entity id="rig"
         movement-controls="constrainToNavMesh: true;
                 controls: checkpoint, gamepad, trackpad, keyboard, nipple;"
-        position="-7 0 21">
+        position="5.762 0.000 87.387">
     <a-entity camera
               position="0 1.8 0"
               look-controls="pointerLockEnabled: true">
       <a-cursor></a-cursor>
     </a-entity>
   </a-entity>
+  
 
   <!-- Nav mesh. --><!--en la position la y NO debes de ponerla a más de 0 o no va a funcionar el navmesh-->
   <a-entity nav-mesh
             normal-material
-            visible="true"
-            position="8.15355 12.01745 34.03205" 
-            gltf-model="#navmeshprueba"></a-entity>
+            visible="false"
+            position="5.555 2.182 18.211" 
+            scale="0.3 0.3 0.3"
+            gltf-model="#meshfinal"></a-entity>
 
             <a-entity gltf-model="#estructura" position="25.078 -6.59637 21.148" scale="0.3 0.3 0.3" ></a-entity>
            
@@ -72,18 +73,7 @@
         <a-entity geometry="primitive: box; height: 3.3; width: 0.8; depth: 0.1" material="src:assets\Texturas\marmol_rosa.jpg" position="2 1.5 -2.088"></a-entity>
         <a-entity geometry="primitive: box; height: 3.3; width: 0.8; depth: 0.1" material="src:assets\Texturas\marmol_verde.jpeg" position="3 1.5 -2.088"></a-entity>
 
-        <a-entity position="2 1 30">
-            <!-- La caja -->
-            <a-box color="#de85a5" depth="0.1" height="1" width="3"></a-box>
-            <!-- El texto dentro de la caja -->
-            <a-text value="Floralis" negate="false"
-                    color="#000000" 
-                    align="center" 
-                    width="25"
-                    position="0 0 0.06"
-                    font="font\alketa-msdf.json" 
-                    font-image="font\alketa.png"></a-text>
-          </a-entity>
+    
 
     </a-scene>
 </body>
