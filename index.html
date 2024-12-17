@@ -18,10 +18,8 @@
         dressingOnPlayArea: 0; grid:none;gridColor:#c5a543; shadow: false"></a-entity>
 
         <!--Textos-->
-        <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
-        color="black" negate="false" scale="4 4 2" position="1.57258 13.98333 63.22804"></a-text>
-        <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="black" negate="false" 
-        scale="15 15 8" position="1.54052 12.29576 63.25107"></a-text>
+        <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="4 4 2" position="-3.31765 12.92594 43.94244"></a-text>
+        <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="black" negate="false" scale="15 15 8" position="-4.6479 10.89704 42.61379"></a-text>
         <a-text value="Ana Mendieta" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
         color="black" negate="false" scale="2 2 1" position="-3.1065 2 -4"></a-text>
         <a-text value="Maris Bustamante" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png"
@@ -32,7 +30,7 @@
         color="black" negate="false" scale="2 2 1" position="0.28536 1.29988 -4.08845"></a-text>
         <a-entity text="value: Herederas del cambio; color:black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false;" position="1.389 13.079 51.519" scale="15 15 1" rotation="0 83.39171525011079 0"></a-entity>
         <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Esta exposición es un conjunto de obras de artistas mujeres latinoamericanas que desafían y cuestionan las convicciones tradicionales establecidas dentro de la sociedad latinoamericana conservadora, 
-        que limitan y violentan la identidad de las mujeres. Se invita a la reflexión individual sobre qué elementos definen a las mujeres esto a través  del diálogo entre los roles de género, la sexualidad, la transición y la violencia." position="1.17431 7.577 53.05243" scale="15 15 1" rotation="0 83.39171525011079 0"></a-entity>
+        que limitan y violentan la identidad de las mujeres. Se invita a la reflexión individual sobre qué elementos definen a las mujeres esto a través  del diálogo entre los roles de género, la sexualidad, la transición y la violencia." position="-6.79205 6.63216 31.30418" scale="15 15 1" rotation="0 83.392 0"></a-entity>
 
          
        
@@ -46,9 +44,9 @@
   <a-entity id="rig"
         movement-controls="constrainToNavMesh: true;
                 controls: checkpoint, gamepad, trackpad, keyboard, nipple;"
-        position="5.762 0.000 87.387">
+        position="0 0 80">
     <a-entity camera
-              position="0 1.8 0"
+              position="0 4 0"
               look-controls="pointerLockEnabled: true">
       <a-cursor></a-cursor>
     </a-entity>
@@ -58,20 +56,113 @@
   <!-- Nav mesh. --><!--en la position la y NO debes de ponerla a más de 0 o no va a funcionar el navmesh-->
   <a-entity nav-mesh
             normal-material
-            visible="false"
+            visible="true"
             position="5.555 2.182 18.211" 
             scale="0.3 0.3 0.3"
             gltf-model="#meshfinal"></a-entity>
 
-            <a-entity gltf-model="#estructura" position="25.078 -6.59637 21.148" scale="0.3 0.3 0.3" ></a-entity>
+            <a-entity gltf-model="#estructura" position="17 -8 0" scale="0.3 0.3 0.3" ></a-entity>
            
 
-<!--texturas y pruebas-->
+<!-- Monolito -->
+<a-entity geometry="primitive: circle; radius: 8" position="0 0.3 0" rotation="-90 0 0" 
+material="src:assets/piedra.jpg ; side: double">
+</a-entity>
+<a-entity geometry="primitive: circle; radius: 6" position="0 0.4 0" rotation="-90 0 0" 
+material="src:assets/pasto.jpg ; side: double">
+</a-entity>
+<a-entity geometry="primitive: box; height: 15; width: 6; depth: 0.1" position="0 8 2"
+material="src:assets/Collage_origen.png; light="type: point">
+</a-entity>
 
-        <a-entity geometry="primitive: box; height: 3.3; width: 0.8; depth: 0.1" material="src:assets\Texturas\mosaico_rosa_1.jpeg" position="0 1.5 -2.088"></a-entity>
-        <a-entity geometry="primitive: box; height: 3.3; width: 0.8; depth: 0.1" material="src:assets\Texturas\estrellas_verdes.jpeg" position="1 1.5 -2.088"></a-entity>
-        <a-entity geometry="primitive: box; height: 3.3; width: 0.8; depth: 0.1" material="src:assets\Texturas\marmol_rosa.jpg" position="2 1.5 -2.088"></a-entity>
-        <a-entity geometry="primitive: box; height: 3.3; width: 0.8; depth: 0.1" material="src:assets\Texturas\marmol_verde.jpeg" position="3 1.5 -2.088"></a-entity>
+<!-- Pasillos -->
+<a-entity position="0 0 0" rotation="0 0 0" scale="1 1 1">
+<a-entity geometry="depth: 5; height: 0.4" material="src: assets/piedra.jpg" 
+    position="-11.1156 -0.03467 14.85585" rotation="-0.012032113697747288 140.41247502153033 0.8663121862378047" 
+    scale="5.95478 1 3.25834">
+</a-entity>
+<a-entity geometry="depth: 5; height: 0.4" material="src: assets/piedra.jpg" 
+    position="-4.283 -0.00225 6.622" rotation="-0.012 140.412 0.866" 
+    scale="5.955 -0.965 2.811">
+</a-entity>
+</a-entity>
+
+<a-entity position="0 0 -1.36245" rotation="0 -5.266628052842528 0" scale="-1 1 1">
+<a-entity geometry="depth: 5; height: 0.4" material="src: assets/piedra.jpg" 
+    position="-11.1156 -0.03467 14.85585" rotation="-0.012032113697747288 140.41247502153033 0.8663121862378047" 
+    scale="5.95478 1 3.25834">
+</a-entity>
+<a-entity geometry="depth: 5; height: 0.4" material="src: assets/piedra.jpg" 
+    position="-4.283 -0.00225 6.622" rotation="-0.012 140.412 0.866" 
+    scale="5.955 -0.965 2.811">
+</a-entity>
+</a-entity>
+
+<!-- Obras y Marcos -->
+<a-entity>
+<a-image height="3" width="5" position="0 1.5 -2" src="Obras\bhm1.jpg"></a-image>
+<a-box height="3.5" width="5.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="0 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="2.5" width="5" position="10 1.5 -2" src="Obras\bhm2.png"></a-image>
+<a-box height="3" width="5.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="10 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="2.5" width="5" position="-10 1.5 -2" src="Obras\lmsy 1.png"></a-image>
+<a-box height="3" width="5.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="-10 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="4" width="4" position="20 1.5 -2" src="Obras\Madres1.jpg"></a-image>
+<a-box height="4.5" width="4.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="20 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="3" width="5" position="-20 1.5 -2" src="Obras\Madres2.jpg"></a-image>
+<a-box height="3.5" width="5.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="-20 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="3" width="5" position="30 1.5 -2" src="Obras\Madres3.jpg"></a-image>
+<a-box height="3.5" width="5.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="30 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="3" width="5" position="-30 1.5 -2" src="Obras\mbp 1.jpg"></a-image>
+<a-box height="3.5" width="5.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="-30 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="2" width="4" position="40 1.5 -2" src="Obras\mbp 2.jpg"></a-image>
+<a-box height="2.5" width="4.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="40 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="4" width="3" position="-40 1.5 -2" src="Obras\mbp 3.jpg"></a-image>
+<a-box height="4.5" width="3.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="-40 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="4" width="3" position="50 1.5 -2" src="Obras\mbp 4.jpg"></a-image>
+<a-box height="4.5" width="3.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="50 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="4" width="3" position="-50 1.5 -2" src="Obras\mbp 5.jpg"></a-image>
+<a-box height="4.5" width="3.5" depth="0.1" src="assets\horna_rosaclaro1.jpg" position="-50 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="4" width="3" position="60 1.5 -2" src="Obras\pht 1.jpg"></a-image>
+<a-box height="4.5" width="3.5" depth="0.1" src="assets\horna_rosaclaro.jpg" position="60 1.5 -2.088"></a-box>
+</a-entity>
+
+<a-entity>
+<a-image height="4" width="3" position="-60 1.5 -2" src="Obras\rp1.jpg"></a-image>
+<a-box height="4.5" width="3.5" depth="0.1" src="assets\horna_rosaclaro.jpg" position="-60 1.5 -2.088"></a-box>
+</a-entity>
 
     
 
