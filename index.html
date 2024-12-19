@@ -57,10 +57,9 @@
         scale="20 20 1" position="5.82672 14.90708 39.75697" rotation="0 -82.00057372353315 0"></a-entity>
 
         <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Floralis porque hace referencia al término científico relacionado con las flores, un símbolo universal de diversidad y belleza." 
-        scale="15 15 1" position="4.8131 11.82168 32.56794" rotation="0 -82.4383134790131 0"></a-entity>
+        scale="15 15 1" position="3.8131 11.82168 32.56794" rotation="0 -82.4383134790131 0"></a-entity>
 
-        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: De igual manera, cada mujer es distinta y única, y nuestra galería busca honrar esta riqueza de identidades a través de un espacio inspirado en la naturaleza. El diseño de nuestra galería, basado en un jardín botánico, refleja esta metáfora, ofreciendo un ambiente donde cada obra y cada historia florecen como parte de un todo." 
-        scale="15 15 1" position="4.7895 6.51306 32.54936" rotation="0.0716197243913529 -82.63082729817707 0.007448451336700701"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: De igual manera, cada mujer es distinta y única, y nuestra galería busca honrar esta riqueza de identidades a través de un espacio inspirado en la naturaleza. El diseño de nuestra galería, basado en un jardín botánico, refleja esta metáfora, ofreciendo un ambiente donde cada obra y cada historia florecen como parte de un todo." scale="15 15 1" position="3.71917 6.51306 32.24791" rotation="0.0716197243913529 -82.63082729817707 0.007448451336700701"></a-entity>
 
         <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Roles de género" 
         scale="20 20 1" position="4.16381 15.585 26.564" rotation="0 99.0953424990564 0"></a-entity>
@@ -122,7 +121,7 @@
     <!--assets-->
        <a-assets>
             <a-asset-item id="meshfinal" src="modelados\meshfinal.glb"></a-asset-item>
-            <a-asset-item id="estructura" src="modelados\galería_versión1.glb"></a-asset-item>
+            <a-asset-item id="estructura" src="modelados/Galeria_definitiva.glb"></a-asset-item>
             <video id="videito" loop="true" src="video\bhm5.mp4"></video>
             <img id="play" src="video\play.png">
             <img id="pause" src="video\pause.png">
@@ -140,8 +139,8 @@
         <a-image id="pauseButton" src="#pause" position="3.5 2 -10" width="0.5" height="0.5" pause-video></a-image>
        
     <!-- Nav mesh. --><!--en la position la y NO debes de ponerla a más de 0 o no va a funcionar el navmesh-->
-    <a-entity nav-mesh normal-material position="-2.5 2 -1.3" scale="0.3 0.3 0.3" gltf-model="modelados\meshfinal.glb" visible="false"></a-entity>
-       <a-entity gltf-model="#estructura" position="17 -7.1 0" scale="0.3 0.3 0.3" ></a-entity>
+    <a-entity nav-mesh normal-material position="-2.5 2 -1.3" scale="0.3 0.3 0.3" gltf-model="modelados\meshfinal.glb" visible="true"></a-entity>
+    </a-entity><a-entity gltf-model="modelados/Galeria_definitiva.glb" position="-1.21707 9.2924 70.71058" scale="2 2 2"></a-entity>
 
     <!-- Monolito -->
        <a-entity geometry="primitive: circle; radius: 8" position="0 0.3 0" rotation="-90 0 0" material="src:assets\Texturas\piedra.jpg ; side: double"></a-entity>
