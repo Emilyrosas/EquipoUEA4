@@ -36,9 +36,9 @@
     <a-scene>
 
     <!--Textos-->
-        <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="4 4 2" position="-3.31765 12.92594 43.94244"></a-text>
+    <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="4 4 2" position="-4.3861 10.55768 42.6493"></a-text>
 
-        <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="black" negate="false" scale="15 15 8" position="-4.6479 10.89704 42.61379"></a-text>
+        <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="black" negate="false" scale="15 15 8" position="-5.71432 8.81596 42.614"></a-text>
 
         <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
         color="black" negate="false" scale="4 4 2" position="-24.82866 12.82698 42.20183"></a-text>
@@ -110,7 +110,7 @@
     <a-entity id="rig"
     movement-controls="constrainToNavMesh: true;
             controls: checkpoint, gamepad, trackpad, keyboard, nipple;"
-    position="-19 0 55">
+    position="-1++ 0 60">
 <a-entity camera
           position="0 2 0"
           look-controls="pointerLockEnabled: true">
@@ -118,7 +118,7 @@
 </a-entity>
 </a-entity>
 
-    <!--assets-->
+    <!--sistema de gestión assets-->
        <a-assets>
             <a-asset-item id="meshfinal" src="modelados\meshfinal.glb"></a-asset-item>
             <a-asset-item id="estructura" src="modelados/Galeria_definitiva.glb"></a-asset-item>
@@ -157,43 +157,35 @@
        <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\piedra.jpg" position="-4.283 -0.00225 6.622" rotation="-0.012 140.412 0.866" scale="5.955 -0.965 2.811"></a-entity>
 
     <!-- Obras y Marcos -->
-       <a-entity>
-            <a-image height="3" width="5" position="0 5 -2" src="assets\Obras\bhm1.jpg"></a-image>
-            <a-box height="3.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="0 5 -2.088"></a-box>
-        </a-entity>
+     
+    <a-entity position="13.3966 0 -29.56749" rotation="0 -24.724847733280416 0">
+        <a-image height="3" width="5" position="0 5 -2" src="assets\Obras\bhm1.jpg"></a-image>
+        <a-box height="3.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="0 5 -2.088"></a-box>
+    </a-entity>
+        
+    <a-entity position="30.43127 0 -14.50075" rotation="0 -47.75545926635898 0">
+        <a-image height="2.5" width="5" position="-10 5 -2" src="assets\Obras\lmsy 1.png"></a-image>
+        <a-box height="3" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-10 5 -2.088"></a-box>
+    </a-entity>
 
         <a-entity>
-            <a-image height="2.5" width="5" position="10 5 -2" src="assets\Obras\bhm2.png"></a-image>
-            <a-box height="3" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="10 5 -2.088"></a-box>
-        </a-entity>
-
-        <a-entity>
-            <a-image height="2.5" width="5" position="-10 5 -2" src="assets\Obras\lmsy 1.png"></a-image>
-            <a-box height="3" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-10 5 -2.088"></a-box>
-        </a-entity>
-
-        <a-entity>
-            <a-image height="4" width="4" position="20 5 -2" src="assets\Obras\Madres1.jpg"></a-image>
+            <a-image height="4" width="4" position="31.37561 5.66686 25.72235" src="assets\Obras\Madres1.jpg" rotation="0 -123.11774397550643 0" scale="2 2 1"></a-image>
             <a-box height="4.5" width="4.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="20 5 -2.088"></a-box>
         </a-entity>
 
         <a-entity>
-            <a-image height="3" width="5" position="-20 5 -2" src="assets\Obras\Madres2.jpg"></a-image>
+            <a-image height="3" width="5" position="19.27924 6.27242 9.98823" src="assets\Obras\Madres2.jpg" scale="2 2 1" rotation="0 62.65408081314578 0"></a-image>
             <a-box height="3.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-20 5 -2.088"></a-box>
         </a-entity>
 
         <a-entity>
-            <a-image height="3" width="5" position="30 5 -2" src="assets\Obras\Madres3.jpg"></a-image>
+            <a-image height="3" width="5" position="37.24303 5 12.24745" src="assets\Obras\Madres3.jpg" rotation="0 -99.97712454576275 0" scale="2 2 1"></a-image>
             <a-box height="3.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="30 5 -2.088"></a-box>
         </a-entity>
 
+        
         <a-entity>
-            <a-image height="3" width="5" position="-30 5 -2" src="assets\Obras\mbp 1.jpg"></a-image>
-            <a-box height="3.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-30 5 -2.088"></a-box>
-        </a-entity>
-
-        <a-entity>
-            <a-image height="2" width="4" position="40 5 -2" src="assets\Obras\mbp 2.jpg"></a-image>
+            <a-image height="2" width="4" position="-22.00527 5 8.32836" src="assets\Obras\mbp 2.jpg" rotation="0 -72.66594532526179 0" scale="2 2 1"></a-image>
             <a-box height="2.5" width="4.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="40 5 -2.088"></a-box>
         </a-entity>
 
@@ -207,17 +199,17 @@
             <a-box height="4.5" width="3.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="50 5 -2.088"></a-box>
         </a-entity>
 
-        <a-entity>
-            <a-image height="4" width="3" position="-50 5 -2" src="assets\Obras\mbp 5.jpg"></a-image>
+        <a-entity position="5.01962 0 57.57002" rotation="0 -54.68538379846629 0">
+            <a-image height="4" width="3" position="-48.09291 5.10487 -4.56311" src="assets\Obras\mbp 5.jpg" rotation="0 9.376454317315922 0"></a-image>
             <a-box height="4.5" width="3.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-50 5 -2.088"></a-box>
         </a-entity>
 
-        <a-entity>
-            <a-image height="4" width="3" position="60 5 -2" src="assets\Obras\pht 1.jpg"></a-image>
+        <a-entity position="-15.1923 0 66.23652" rotation="0 55.300167512641664 0">
+            <a-image height="4" width="3" position="43.26093 6.63315 -5.08876" src="assets\Obras\pht 1.jpg" rotation="0 38.49875312822541 0" scale="2 2 1"></a-image>
             <a-box height="4.5" width="3.5" depth="0.1" src="assets\Texturas\horna_rosaclaro.jpg" position="60 5 -2.088"></a-box>
         </a-entity>
-
-        <a-entity>
+        
+        <a-entity position="-69.17739 0 -6.1878" rotation="-0.005156620156177409 141.22321030164045 0.0011459155902616466">
             <a-image height="4" width="3" position="-60 5 -2" src="assets\Obras\rp1.jpg"></a-image>
             <a-box height="4.5" width="3.5" depth="0.1" src="assets\Texturas\horna_rosaclaro.jpg" position="-60 5 -2.088"></a-box>
         </a-entity>
