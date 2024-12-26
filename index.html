@@ -36,7 +36,7 @@
     <a-scene>
 
     <!--Textos-->
-    <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="4 4 2" position="-4.3861 10.55768 42.6493"></a-text>
+        <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="4 4 2" position="-4.3861 10.55768 42.6493"></a-text>
 
         <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="black" negate="false" scale="15 15 8" position="-5.71432 8.81596 42.614"></a-text>
 
@@ -102,7 +102,7 @@
     <!--entorno-->
         <a-entity environment= "preset: forest; dressingAmount: 70; skyType:gradient; skyColor:#f3a76d; horizonColor:#997f87; 
         lighting:distant; lightPosition: 0 1.65 -1; fog: 0.75; flatShading: false; playArea: 1; ground:hills; 
-        groundYScale:5; groundTexture:walkernoise; groundColor: #091703; groundColor2:#040d00; dressing:trees; 
+        groundYScale:5; groundTexture:walkernoise; groundColor: #091703; groundColor2:#040d00; dressing:none; 
         dressingColor:#092006; dressingScale: 1; dressingVariance:20 20 20; dressingUniformScale: true; 
         dressingOnPlayArea: 0; grid:none;gridColor:#c5a543; shadow: false"></a-entity>
 
@@ -112,7 +112,7 @@
             controls: checkpoint, gamepad, trackpad, keyboard, nipple;"
     position="-1++ 0 60">
 <a-entity camera
-          position="0 2 0"
+          position="0 5 0"
           look-controls="pointerLockEnabled: true">
   <a-cursor></a-cursor>
 </a-entity>
@@ -129,93 +129,205 @@
 
     <!-- Entidad Video -->
         <a-entity>
-            <a-video src="#videito" position="0 2 -10" width="5" height="2.5"></a-video>
-            <a-box height="3" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="0 2 -10.088"></a-box>
+            <a-video src="#videito" position="22.503 6.337 -29.69788" rotation="0 -35.073 0" scale="1.5 1.5 0" width="5" height="2.5"></a-video>
+            <a-box src="assets\Texturas\horna_rosaclaro1.jpg" height="3" width="5" depth="0.1" position="22.55046 6.337 -29.75184" rotation="0 -35.08277875365544 0" scale="1.66633 1.51137 1"></a-box>
         </a-entity>
+
+    <!-- Audio -->
+    <a-entity id="ambi" geometry="primitive: plane" material="color: blue" position="0 0.87493 0" sound="autoplay: true; loop: true; src: audio\audio_ambiental.mp3; volume: 50"></a-entity>
 
 
     <!-- Control Buttons -->
-        <a-image id="playButton" src="#play" position="-3.5 2 -10" width="0.5" height="0.5" play-video></a-image>
-        <a-image id="pauseButton" src="#pause" position="3.5 2 -10" width="0.5" height="0.5" pause-video></a-image>
+        <a-image id="playButton" src="#play" position="26.65366 4.91759 -26.71309" rotation="0 -42.65 0" width="0.5" height="0.5" play-video></a-image>
+        <a-image id="pauseButton" src="#pause" position="18.30347 4.91759 -32.54588" rotation="0.52 -30.99 0" width="0.5" height="0.5" pause-video></a-image>
        
     <!-- Nav mesh. --><!--en la position la y NO debes de ponerla a más de 0 o no va a funcionar el navmesh-->
-    <a-entity nav-mesh normal-material position="-2.5 2 -1.3" scale="0.3 0.3 0.3" gltf-model="modelados\meshfinal.glb" visible="false"></a-entity>
-    </a-entity><a-entity gltf-model="modelados/Galeria_definitiva.glb" position="-1.21707 9.2924 70.71058" scale="2 2 2"></a-entity>
+        <a-entity nav-mesh normal-material position="-2.5 2 -1.3" scale="0.3 0.3 0.3" gltf-model="modelados\meshfinal.glb" visible="false"></a-entity>
+        </a-entity><a-entity gltf-model="modelados/Galeria_definitiva.glb" position="-1.21707 9.2924 70.71058" scale="2 2 2"></a-entity>
 
     <!-- Monolito -->
-       <a-entity geometry="primitive: circle; radius: 8" position="0 0.3 0" rotation="-90 0 0" material="src:assets\Texturas\piedra.jpg ; side: double"></a-entity>
-       <a-entity geometry="primitive: circle; radius: 6" position="0 0.4 0" rotation="-90 0 0" material="src:assets\Texturas\pasto.jpg ; side: double"></a-entity>
-       <a-entity geometry="primitive: box; height: 15; width: 6; depth: 0.1" position="0 7.5 2" material="src:assets\Obras\Collage_origen.png ; light="type: point></a-entity>
+    <a-entity geometry="primitive: cylinder; radius: 8" position="0 -17.75393 0" rotation="0 89.20208025053248 0" material="side: double; src: assets\Texturas\musgo.jpg" scale="1 38.05491 1"></a-entity>
+       <a-entity geometry="primitive: circle; radius: 6.5" position="0 1.40466 0" rotation="-90 0 0" material="side: double; src: assets\Texturas\agua.jpg"></a-entity>
+       <a-entity geometry="depth: 0.1; height: 15; width: 6" position="0 8.90466 2" material="src: assets\Obras\Collage_origen.png" type:="" point=""></a-entity>
 
     <!-- Pasillos -->
-       <a-entity position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity>
-       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\piedra.jpg" position="-11.1156 -0.03467 14.85585" rotation="-0.012032113697747288 140.41247502153033 0.8663121862378047" scale="5.95478 1 3.25834"></a-entity>
-       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\piedra.jpg" position="-4.283 -0.00225 6.622" rotation="-0.012 140.412 0.866" scale="5.955 -0.965 2.811"></a-entity>
+       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="8.11036 -0.03467 14.71454" rotation="0 -144.67871876407443  " scale="5.95478 1 3.25834"></a-entity>
+       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="-4.55908 -0.01177 6.5232" rotation="0 -35.28216806636096 0" scale="5.955 -0.965 2.811"></a-entity>
 
-       <a-entity position="0 0 -1.36245" rotation="0 -5.266628052842528 0" scale="-1 1 1"></a-entity>
-       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\piedra.jpg" position="-11.1156 -0.03467 14.85585" rotation="-0.012032113697747288 140.41247502153033 0.8663121862378047" scale="5.95478 1 3.25834"></a-entity>
-       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\piedra.jpg" position="-4.283 -0.00225 6.622" rotation="-0.012 140.412 0.866" scale="5.955 -0.965 2.811"></a-entity>
+       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="-10.45826 -0.03467 14.91681" rotation="0 145.13422021120343 0" scale="5.95478 1 3.25834"></a-entity>
+       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="3.94856 -0.06178 8.86068" rotation="0 34.79744577168029 0" scale="5.955 -0.965 2.811"></a-entity>
+
+    <!-- Piso
+    <a-entity geometry="primitive: ring; radiusInner: 23; radiusOuter: 40" position="-1.17464 0.683 2.76043" rotation="-90 0 0" material="side: double; src: assets\Texturas\piso.jpg"></a-entity>-->
 
     <!-- Obras y Marcos -->
-     
-    <a-entity position="13.3966 0 -29.56749" rotation="0 -24.724847733280416 0">
-        <a-image height="3" width="5" position="0 5 -2" src="assets\Obras\bhm1.jpg"></a-image>
-        <a-box height="3.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="0 5 -2.088"></a-box>
-    </a-entity>
-        
-    <a-entity position="30.43127 0 -14.50075" rotation="0 -47.75545926635898 0">
-        <a-image height="2.5" width="5" position="-10 5 -2" src="assets\Obras\lmsy 1.png"></a-image>
-        <a-box height="3" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-10 5 -2.088"></a-box>
-    </a-entity>
 
+        <!-- Maris Bustamante -->
         <a-entity>
-            <a-image height="4" width="4" position="31.37561 5.66686 25.72235" src="assets\Obras\Madres1.jpg" rotation="0 -123.11774397550643 0" scale="2 2 1"></a-image>
-            <a-box height="4.5" width="4.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="20 5 -2.088"></a-box>
+            <a-image height="4" width="4" position="21.62185 5.95936 35.54919" rotation="0 -143.332267945517 0" scale="1.5 1.5 0" src="assets\Obras\Madres1.jpg"></a-image>
+            <a-box height="7" width="7" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="21.7323 5.95936 35.67044" rotation="0 -143.332267945517 0"></a-box>
         </a-entity>
 
         <a-entity>
-            <a-image height="3" width="5" position="19.27924 6.27242 9.98823" src="assets\Obras\Madres2.jpg" scale="2 2 1" rotation="0 62.65408081314578 0"></a-image>
-            <a-box height="3.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-20 5 -2.088"></a-box>
+            <a-image height="3" width="5" position="28.93105 6.05142 29.11452" rotation="0 -128.5453731687807 0" scale="1.5 1.5 0" src="assets\Obras\Madres2.jpg"></a-image>
+            <a-box height="5.5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="29.01978 6.05142 29.11177" rotation="0 -128.5453731687807 0" scale="1.12693 1 1"></a-box>
         </a-entity>
 
         <a-entity>
-            <a-image height="3" width="5" position="37.24303 5 12.24745" src="assets\Obras\Madres3.jpg" rotation="0 -99.97712454576275 0" scale="2 2 1"></a-image>
-            <a-box height="3.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="30 5 -2.088"></a-box>
-        </a-entity>
-
-        
-        <a-entity>
-            <a-image height="2" width="4" position="-22.00527 5 8.32836" src="assets\Obras\mbp 2.jpg" rotation="0 -72.66594532526179 0" scale="2 2 1"></a-image>
-            <a-box height="2.5" width="4.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="40 5 -2.088"></a-box>
+            <a-image height="3" width="5" position="34.98959 6.00266 19.29504" rotation="0 -112.99394 0" scale="1.5 1.5 0" src="assets\Obras\Madres3.jpg"></a-image>
+            <a-box height="5.5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="35.12678 6.00266 19.32223" rotation="0 -112.99394 0" scale="1.10452 1 1"></a-box>
         </a-entity>
 
         <a-entity>
-            <a-image height="4" width="3" position="-40 5 -2" src="assets\Obras\mbp 3.jpg"></a-image>
-            <a-box height="4.5" width="3.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-40 5 -2.088"></a-box>
+            <a-image height="4" width="3" position="38.17666 5.99657 8.99277" rotation="0 -100.616 0.020053522829578813" scale="1.5 1.5 0" src="assets\Obras\pht 1.jpg"></a-image>
+            <a-box height="6.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro.jpg" position="38.33974 5.99657 9.00941" rotation="0 -100.616 0.020053522829578813" scale="1 1.06626 1"></a-box>
+        </a-entity>
+
+        <!-- Maria Eugenia -->
+        <a-entity>
+            <a-image height="3" width="5" position="37.15123 6.02885 -7.95039" scale="1.5 1.5 0" src="assets\Obras\bhm1.jpg" rotation="0 -71.78931989871163 0"></a-image>
+            <a-box height="5.5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="37.30783 6.02885 -8.00466" rotation="0 -71.78931989871163 0" scale="1.14629 1 1"></a-box>
         </a-entity>
 
         <a-entity>
-            <a-image height="4" width="3" position="50 5 -2" src="assets\Obras\mbp 4.jpg"></a-image>
-            <a-box height="4.5" width="3.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="50 5 -2.088"></a-box>
+            <a-image height="2.5" width="5" position="30.85361 6.33685 -20.99824" scale="1.5 1.5 0" src="assets\Obras\bhm2.png" rotation="0 -59.56272 0"></a-image>
+            <a-box height="5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="30.95268 6.33685 -21.01594" rotation="0 -58.95048162542014 0" scale="1.12208 0.92282 1"></a-box>
         </a-entity>
 
-        <a-entity position="5.01962 0 57.57002" rotation="0 -54.68538379846629 0">
-            <a-image height="4" width="3" position="-48.09291 5.10487 -4.56311" src="assets\Obras\mbp 5.jpg" rotation="0 9.376454317315922 0"></a-image>
-            <a-box height="4.5" width="3.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-50 5 -2.088"></a-box>
+        <a-entity>
+            <a-image height="2.5" width="5" position="10.69094 6.3539 -35.40946" scale="1.5 1.5 0" src="assets\Obras\lmsy 1.png" rotation="0 -16.51608140244111 0"></a-image>
+            <a-box height="5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="10.6858 6.3539 -35.50094" rotation="0 -16.51608140244111 0" scale="1.11945 0.94038 1"></a-box>
         </a-entity>
 
-        <a-entity position="-15.1923 0 66.23652" rotation="0 55.300167512641664 0">
-            <a-image height="4" width="3" position="43.26093 6.63315 -5.08876" src="assets\Obras\pht 1.jpg" rotation="0 38.49875312822541 0" scale="2 2 1"></a-image>
-            <a-box height="4.5" width="3.5" depth="0.1" src="assets\Texturas\horna_rosaclaro.jpg" position="60 5 -2.088"></a-box>
+        <!-- Lia Gracía -->
+
+        <!-- Ana Mendieta -->
+        <a-entity>
+            <a-image height="3" width="5" position="-39.60694 6.507 12.72879" scale="1.5 1.5 0" src="assets\Obras\mbp 1.jpg" rotation="0 -75.5026593689545 0"></a-image>
+            <a-box height="5.5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-39.77791 6.507 12.77959" rotation="0 -75.5026593689545 0" scale="1.11987 1 1"></a-box>
         </a-entity>
-        
-        <a-entity position="-69.17739 0 -6.1878" rotation="-0.005156620156177409 141.22321030164045 0.0011459155902616466">
-            <a-image height="4" width="3" position="-60 5 -2" src="assets\Obras\rp1.jpg"></a-image>
-            <a-box height="4.5" width="3.5" depth="0.1" src="assets\Texturas\horna_rosaclaro.jpg" position="-60 5 -2.088"></a-box>
+
+        <a-entity>
+            <a-image height="4" width="3" position="-36.24774 6.63145 21.97684" scale="1.5 1.5 0" src="assets\Obras\mbp 3.jpg" rotation="0 -66.04942870709104 0"></a-image>
+            <a-box height="7.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-36.37128 6.63145 22.02152" rotation="0 -66.04942870709104 0" scale="0.94801 0.94349 1"></a-box>
         </a-entity>
+
+        <a-entity>
+            <a-image height="4" width="3" position="-30.54991 6.85612 29.75112" scale="1.5 1.5 0" src="assets\Obras\mbp 4.jpg" rotation="0 -45.09557 0"></a-image>
+            <a-box height="6.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-30.68416 6.85612 29.91161" rotation="0 -45.09557 0" scale="0.93512 1.10891 1"></a-box>
+        </a-entity>
+
+        <a-entity>
+            <a-image height="4" width="3" position="-24.13463 6.50635 35.81039" scale="1.5 1.5 0" src="assets\Obras\mbp 5.jpg" rotation="0 -34.84041760631509 0"></a-image>
+            <a-box height="6.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-24.18185 6.50635 35.88197" rotation="0 -34.84041760631509 0" scale="0.95794 1.04847 1"></a-box>
+        </a-entity>
+
+        <a-entity>
+            <a-image height="4" width="3" position="-22.08365 5.84813 9.9608" scale="1.5 1.5 0" src="assets\Obras\rp1.jpg" rotation="0 111.65 0"></a-image>
+            <a-box height="6.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro.jpg" position="-21.814 5.848 9.87" rotation="0 111.65 0" scale="1 1.06011 1"></a-box>
+        </a-entity>
+
 
     <!-- Descripción de Obras -->
-        
+
+        <!-- Maris Bustamante -->
+        <a-entity position="13.8268 -1.36802 38.64236" scale="0.83854 1.8601 7.76502" rotation="0 163.539916421986 0">
+            <a-text value="Nombre: ¡Madres!
+            Tipo de documento: Obras
+            Artistas: Maris Bustamante|Polvo de
+            Gallina Negra
+            Año: 1984
+            Lugar estreno: Diferentes espacios museísticos, calles de la ciudad y televisión" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.794 0.731 2.235" position="-1.501 3.063 0.092"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 2.45 0.088" scale="1.392 0.951 0.057" rotation="0 0.048 0"></a-box>
+        </a-entity>
+
+        <a-entity position="17.9951 1.68795 38.83986" scale="0.8774 0.97064 7.765" rotation="0 -152.07846868818902 0">
+            <a-text value="Performance Tres madres para un Desmadre, realizado en 1990
+            durante la serie de acciones callejeras Madre sólo hay una organizada
+            por la Sociedad de  Espectáculos en la Colonia Narvarte" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-1.00764 3.05339 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="1.055 0.537 0.057" rotation="0 0.031 0"></a-box>
+        </a-entity>
+
+        <a-entity position="33.3986 1.54293 24.41495" scale="1.03334 1.10387 7.76502" rotation="0 -118.79191262226873 0">
+            <a-text value="Durante un performance del mismo proyecto, pero esta vez ante un
+            público en vivo en el Museo
+            Carrillo Gil en la ciudad de México" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.84744 3.05092 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="0.94365 0.36178 0.057" rotation="0 0.030939720937064454 0"></a-box>
+        </a-entity>
+
+        <a-entity position="38.26237 0.97893 13.49562" scale="0.83277 1.24807 7.765" rotation="0 -104.77163537541747 0">
+            <a-text value="Nombre: El pene como instrumento de trabajo
+            Tipo de documento: Obras
+            Artistas: Maris Bustamante
+            Año: 1982" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.98354 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="1.046 0.438 0.057" rotation="0 0.031 0"></a-box>
+        </a-entity>
+
+        <!-- Maria Eugenia -->
+        <a-entity position="39.44905 0.91013 -2.36446" scale="1.145 1.379 7.765" rotation="0 -85.74370699912282 0">
+            <a-text value="Nombre: Bonita hasta la muerte
+            Tipo de documento: Videoperformance - 2:19 min
+            Artistas: María Eugenia Chellet
+            Año: 2012
+            Créditos: Dirección y edición de David Pablos" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.98354 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="1.04621 0.62128 0.057" rotation="0 0.030939720937064454 0"></a-box>
+        </a-entity>
+
+        <a-entity position="35.23972 0.91013 -15.74749" scale="1.145 1.379 7.765" rotation="0 -63.079788454927986 0">
+            <a-text value="Nombre: Bonita hasta la muerte
+            Tipo de documento: Videoperformance - 2:19 min
+            Artistas: María Eugenia Chellet
+            Año: 2012
+            Créditos: Dirección y edición de David Pablos" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.98354 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="1.04621 0.62128 0.057" rotation="0 0.030939720937064454 0"></a-box>
+        </a-entity>
+
+        <a-entity position="4.36503 0.80158 -37.83484" scale="1.145 1.379 7.765" rotation="0 -7.105249617417338 0">
+            <a-text value="Nombre: La maja soy yo
+            Tipo de documento: Collage - 38x50cm
+            Artistas: María Eugenia Chellet
+            Año: 1988" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="1.00713 0.35615 0.057" rotation="0 0.030939720937064454 0"></a-box>
+        </a-entity>
+
+        <!-- Ana Mendieta -->
+        <a-entity position="-41.74014 0.88314 7.30266" scale="1.145 1.379 7.765" rotation="0 97.5953389914039 0">
+            <a-text value="Nombre: Moffitt Building Piece
+            Tipo de documento: Videoinstalación
+            Artistas: Ana Mendieta
+            Año: 1973" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.05841 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.00999 0.088" scale="1.04454 0.34975 0.057" rotation="0 0.030939720937064454 0"></a-box>
+        </a-entity>
+
+        <a-entity position="-34.1892 0.73398 27.02534" scale="1.145 1.379 7.765" rotation="0 123.77034290416044 0">
+            <a-text value="Nombre: Moffitt Building Piece
+            Tipo de documento: Videoinstalación
+            Artistas: Ana Mendieta
+            Año: 1973" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.00999 0.088" scale="1.04454 0.37549 0.057" rotation="0 0.030939720937064454 0"></a-box>
+        </a-entity>
+
+        <a-entity position="-19.9711 0.67007 39.18544" scale="1.145 1.379 7.765" rotation="0 153.17224511909376 0">
+            <a-text value="Nombre: Moffitt Building Piece
+            Tipo de documento: Videoinstalación
+            Artistas: Ana Mendieta
+            Año: 1973" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.00999 0.088" scale="1.04454 0.36533 0.057" rotation="0 0.030939720937064454 0"></a-box>
+        </a-entity>
+
+        <a-entity position="-19.20086 0.38732 13.3507" scale="1.145 1.29275 7.765" rotation="0 -62.56584531269563 0">
+            <a-text value="Nombre: Rape Scene
+            Tipo de documento: Conjunto de 5 fotografías en color - 50.8x40.6 cm
+            Artistas: Ana Mendieta
+            Año: 1973
+            Créditos: The Estate of Ana Mendieta Collection, LLC, and Galerie Lelong, New York" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-1.01682 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.00999 0.088" scale="1.05526 0.64851 0.057" rotation="0 0.030939720937064454 0"></a-box>
+        </a-entity>
+
+    <!-- Decoración -->
+    <a-image height="4" width="3" position="10.8771 6.37891 18.97542" src="decoración\glicemia_png.png" rotation="0 35.88262783565806 0" scale="1.37712 0.91717 0"></a-image>
+
+    
     </a-scene>
     
 </body>
