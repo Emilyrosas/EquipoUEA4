@@ -36,11 +36,9 @@
     <a-scene>
 
     <!--Textos-->
-    <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
-    color="black" negate="false" scale="4 4 2" position="-4.3861 13.054 42.6493"></a-text>
+    <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="4 4 2" position="-4.3861 15.67069 60.52888"></a-text>
 
-    <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="black" negate="false" scale="15 15 8" position="-5.71432 11.152 42.614"></a-text>
-
+    <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="black" negate="false" scale="15 15 8" position="-5.71432 13.71341 60.71208"></a-text>
     <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Herederas del cambio" 
     scale="20 20 1" position="-5.87936 13.665 27.010" rotation="0 84.06780544836516 0"></a-entity>
 
@@ -106,7 +104,7 @@
     <a-entity id="rig"
     movement-controls="constrainToNavMesh: true;
             controls: checkpoint, gamepad, trackpad, keyboard, nipple;"
-    position="-1++ 0 114.323">
+    position="-1 0 120">
 <a-entity camera
           position="0 4 0"
           look-controls="pointerLockEnabled: true">
@@ -116,8 +114,8 @@
 
     <!--sistema de gestión assets-->
        <a-assets>
-        <a-asset-item id="navmeshfinal" src="modelados/navmesh_final_final.glb"></a-asset-item>
-            <a-asset-item id="estructura" src="modelados/Galeria_definitiva.glb"></a-asset-item>
+        <a-asset-item id="navmeshfinal" src="modelados/NavMesh2.glb"></a-asset-item>
+            <a-asset-item id="estructura" src="modelados/Galeria.glb"></a-asset-item>
             <video id="videito" loop="true" src="video\bhm5.mp4"></video>
             <img id="play" src="video\play.png">
             <img id="pause" src="video\pause.png">
@@ -138,8 +136,8 @@
         <a-image id="pauseButton" src="#pause" position="18.30347 4.91759 -32.54588" rotation="0.52 -30.99 0" width="0.5" height="0.5" pause-video></a-image>
        
     <!-- Nav mesh. --><!--en la position la y NO debes de ponerla a más de 0 o no va a funcionar el navmesh-->
-        <a-entity nav-mesh normal-material position="-2.5 2 -1.3" scale="2 2 2" gltf-model="modelados/navmesh_final_final.glb" visible="false"></a-entity>
-        <a-entity gltf-model="modelados/Galeria_definitiva.glb" position="-1.21707 10.86179 70.71058" scale="2 2 2"></a-entity>
+    <a-entity nav-mesh normal-material position="-1.6 0 -105.6" scale="6.5 0 6.5" gltf-model="modelados/NavMesh2.glb" visible=""></a-entity>
+    <a-entity gltf-model="modelados/Galeria.glb" position="-1.27604 8.5 74.73343" scale="6.6 6.6 6.6" visible=""></a-entity>
 
     <!-- Monolito -->
     <a-entity geometry="primitive: cylinder; radius: 8" position="0 -17.75393 0" rotation="0 89.20208025053248 0" material="side: double; src: assets\Texturas\musgo.jpg" scale="1 38.05491 1"></a-entity>
