@@ -9,8 +9,10 @@
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
     <script>
         AFRAME.registerComponent('play-video', {
+            schema: { videoId: { type: 'string' } },
             init: function () {
-                var myVideo = document.querySelector('#videito');
+                var videoId = this.data.videoId;
+                var myVideo = document.querySelector(videoId);
                 this.el.addEventListener('click', function () {
                     if (myVideo.paused) {
                         myVideo.play().catch((e) => console.error('Error playing video:', e));
@@ -20,8 +22,10 @@
         });
 
         AFRAME.registerComponent('pause-video', {
+            schema: { videoId: { type: 'string' } },
             init: function () {
-                var myVideo = document.querySelector('#videito');
+                var videoId = this.data.videoId;
+                var myVideo = document.querySelector(videoId);
                 this.el.addEventListener('click', function () {
                     if (!myVideo.paused) {
                         myVideo.pause();
@@ -36,81 +40,81 @@
     <a-scene>
 
     <!--Textos-->
-    <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="4 4 2" position="-4.3861 15.67069 60.52888"></a-text>
+        <a-text value="Galería Virtual" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="4 4 2" position="-4.3861 15.67069 60.52888"></a-text>
 
-    <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="black" negate="false" scale="15 15 8" position="-5.71432 13.71341 60.71208"></a-text>
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Herederas del cambio" 
-    scale="20 20 1" position="-5.87936 13.665 27.010" rotation="0 84.06780544836516 0"></a-entity>
+        <a-text value="Floralis" font="font\alketa-msdf.json" font-image="font\alketa.png" color="black" negate="false" scale="15 15 8" position="-5.71432 13.71341 60.71208"></a-text>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Herederas del cambio" 
+        scale="20 20 1" position="-5.87936 13.665 27.010" rotation="0 84.06780544836516 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Esta exposición es un conjunto de obras de artistas mujeres latinoamericanas que desafían y cuestionan las convicciones tradicionales establecidas dentro de la sociedad latinoamericana conservadora, 
-    que limitan y violentan la identidad de las mujeres. Se invita a la reflexión individual sobre qué elementos definen a las mujeres esto a través  del diálogo entre los roles de género, la sexualidad, la transición y la violencia." 
-    position="-6.31151 7.096 31.732" scale="15 15 1" rotation="0 85.57812219633001 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Esta exposición es un conjunto de obras de artistas mujeres latinoamericanas que desafían y cuestionan las convicciones tradicionales establecidas dentro de la sociedad latinoamericana conservadora, 
+        que limitan y violentan la identidad de las mujeres. Se invita a la reflexión individual sobre qué elementos definen a las mujeres esto a través  del diálogo entre los roles de género, la sexualidad, la transición y la violencia." 
+        position="-6.31151 7.096 31.732" scale="15 15 1" rotation="0 85.57812219633001 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Galería floralis" 
-    scale="20 20 1" position="4.73862 14.189 39.2467" rotation="0 -84.37433786876016 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Galería floralis" 
+        scale="20 20 1" position="4.73862 14.189 39.2467" rotation="0 -84.37433786876016 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Floralis hace referencia al término científico relacionado con las flores, un símbolo universal de diversidad y belleza." 
-    scale="15 15 1" position="3.8131 10.887 33.0052" rotation="0.0716197243913529 -84.6241474674372 0.007448451336700701"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Floralis hace referencia al término científico relacionado con las flores, un símbolo universal de diversidad y belleza." 
+        scale="15 15 1" position="3.8131 10.887 33.0052" rotation="0.0716197243913529 -84.6241474674372 0.007448451336700701"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: De igual manera, cada mujer es distinta y única, y nuestra galería busca honrar esta riqueza de identidades a través de un espacio inspirado en la naturaleza. El diseño de nuestra galería, basado en un jardín botánico, refleja esta metáfora, ofreciendo un ambiente donde cada obra y cada historia florecen como parte de un todo." 
-    scale="15 15 1" position="3.71917 5.133 33.10143" rotation="0.0716197243913529 -84.6241474674372 0.007448451336700701"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: De igual manera, cada mujer es distinta y única, y nuestra galería busca honrar esta riqueza de identidades a través de un espacio inspirado en la naturaleza. El diseño de nuestra galería, basado en un jardín botánico, refleja esta metáfora, ofreciendo un ambiente donde cada obra y cada historia florecen como parte de un todo." 
+        scale="15 15 1" position="3.71917 5.133 33.10143" rotation="0.0716197243913529 -84.6241474674372 0.007448451336700701"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Roles de género" 
-    scale="20 20 1" position="3.90727 15.52319 26.52407" rotation="0 97.20458177512468 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Roles de género" 
+        scale="20 20 1" position="3.90727 15.52319 26.52407" rotation="0 97.20458177512468 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Los roles de género implican una construcción social de las conductas, creencias y expectativas que se consideran apropiadas de acuerdo con el género asignado. Estas construcciones sociales se establecen dependiendo del contexto sociocultural y se refuerzan a través de entornos de socialización como la escuela, la familia, la religión y los medios de comunicación.; wrapCount: 60" 
-    scale="15 15 1" position="4.95181 12.21433 32.30826" rotation="0 98.567 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Los roles de género implican una construcción social de las conductas, creencias y expectativas que se consideran apropiadas de acuerdo con el género asignado. Estas construcciones sociales se establecen dependiendo del contexto sociocultural y se refuerzan a través de entornos de socialización como la escuela, la familia, la religión y los medios de comunicación.; wrapCount: 60" 
+        scale="15 15 1" position="4.95181 12.21433 32.30826" rotation="0 98.567 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Los roles de género limitan la libertad sexual, así como la exploración y el autoconocimiento generando confusión o miedo, lo que afecta la manera en que las personas experimentan y expresan su sexualidad.; wrapCount: 60" 
-    scale="15 15 1" position="4.82327 8.43838 32.35425" rotation="0 98.56650245415065 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Los roles de género limitan la libertad sexual, así como la exploración y el autoconocimiento generando confusión o miedo, lo que afecta la manera en que las personas experimentan y expresan su sexualidad.; wrapCount: 60" 
+        scale="15 15 1" position="4.82327 8.43838 32.35425" rotation="0 98.56650245415065 0"></a-entity>
 
-    <a-text value="Maris Bustamante" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
-    color="black" negate="false" scale="4 4 1" position="5.29011 5.88082 36.31923" rotation="0 98.74182753946069 0"></a-text>
+        <a-text value="Maris Bustamante" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
+        color="black" negate="false" scale="4 4 1" position="5.29011 5.88082 36.31923" rotation="0 98.74182753946069 0"></a-text>
 
-    <a-entity text="color: black; font: font/Mangiola-Regular-msdf.json; fontImage: font/Mangiola-Regular.png; negate: false; value: Es una artista conceptual mexicana, pionera del arte feminista. Cofundadora de los colectivos No-Grupo y Polvo de Gallina Negra, destacó por su crítica a los roles de género y su legado en el arte contemporáneo.; wrapCount: 60" 
-    scale="15 15 1" position="4.77232 3.62878 32.43103" rotation="0 97.18452825229511 0"></a-entity>
+        <a-entity text="color: black; font: font/Mangiola-Regular-msdf.json; fontImage: font/Mangiola-Regular.png; negate: false; value: Es una artista conceptual mexicana, pionera del arte feminista. Cofundadora de los colectivos No-Grupo y Polvo de Gallina Negra, destacó por su crítica a los roles de género y su legado en el arte contemporáneo.; wrapCount: 60" 
+        scale="15 15 1" position="4.77232 3.62878 32.43103" rotation="0 97.18452825229511 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Sexualidad" 
-    scale="20 20 1" position="20.21529 11.70561 -10.0867" rotation="0 99 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Sexualidad" 
+        scale="20 20 1" position="20.21529 11.70561 -10.0867" rotation="0 99 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: La sexualidad se constituye como uno de los aspectos centrales del ser humano, involucrando el deseo sexual. La sexualidad se construye junto con la identidad de género y, en el caso de las mujeres, se ha visto limitada por las creencias de diferentes contextos, lo que da como resultado el miedo y reproche al placer. La libre expresión de la sexualidad femenina impulsa la autoexploración, el autoconocimiento y el consentimiento, siendo una experiencia personal que puede ser compartida con quien ellas desee.; wrapCount: 50" 
-    scale="10 10 1" position="21.292 8.04626 -3.61426" rotation="0 99.75424396345684 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: La sexualidad se constituye como uno de los aspectos centrales del ser humano, involucrando el deseo sexual. La sexualidad se construye junto con la identidad de género y, en el caso de las mujeres, se ha visto limitada por las creencias de diferentes contextos, lo que da como resultado el miedo y reproche al placer. La libre expresión de la sexualidad femenina impulsa la autoexploración, el autoconocimiento y el consentimiento, siendo una experiencia personal que puede ser compartida con quien ellas desee.; wrapCount: 50" 
+        scale="10 10 1" position="21.292 8.04626 -3.61426" rotation="0 99.75424396345684 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: La capacidad de vivir su sexualidad sin las restricciones impuestas otorga la libertad de explorar su atracción sexual sin sentirse limitadas, experimentando un cambio y un mejor disfrute de la sexualidad en un espacio de confianza.; wrapCount: 50" 
-    scale="10 10 1" position="21.292 3.80947 -3.53507" rotation="0 99.75424396345684 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: La capacidad de vivir su sexualidad sin las restricciones impuestas otorga la libertad de explorar su atracción sexual sin sentirse limitadas, experimentando un cambio y un mejor disfrute de la sexualidad en un espacio de confianza.; wrapCount: 50" 
+        scale="10 10 1" position="21.292 3.80947 -3.53507" rotation="0 99.75424396345684 0"></a-entity>
 
-    <a-text value="María Eugenia Chellet" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
-    color="black" negate="false" scale="4 4 1" position="13.72637 11.7 -14.77346" rotation="0 148.04500000000002 0"></a-text>
+        <a-text value="María Eugenia Chellet" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
+        color="black" negate="false" scale="4 4 1" position="13.72637 11.7 -14.77346" rotation="0 148.04500000000002 0"></a-text>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Artista mexicana que explora la sexualidad y los estereotipos de género. Utiliza el collage, la fotografía y el performance para reinterpretar arquetipos femeninos, cuestionando los cánones de belleza impuestos por la cultura popular y el arte. Su trabajo combina erotismo, crítica social y reflexión sobre la superficialidad, a menudo con un enfoque irónico y provocador.; wrapCount: 50" 
-    scale="13 13 1" position="8.87157 7.28515 -17.45656" rotation="0 148.04484581046802 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Artista mexicana que explora la sexualidad y los estereotipos de género. Utiliza el collage, la fotografía y el performance para reinterpretar arquetipos femeninos, cuestionando los cánones de belleza impuestos por la cultura popular y el arte. Su trabajo combina erotismo, crítica social y reflexión sobre la superficialidad, a menudo con un enfoque irónico y provocador.; wrapCount: 50" 
+        scale="13 13 1" position="8.87157 7.28515 -17.45656" rotation="0 148.04484581046802 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Transición" 
-    scale="20 20 1" position="-15.10238 11.7 -17.20736" rotation="0 -164.10141506121423 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Transición" 
+        scale="20 20 1" position="-15.10238 11.7 -17.20736" rotation="0 -164.10141506121423 0"></a-entity>
     
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: La transición es un proceso que refiere a aquellas personas cuya identidad de género difiere del sexo que se les asignó al nacer. La transición presenta un elemento desconocido en relación con lo que se considera “normal”, construido desde las estructuras heteronormativas. En nuestro contexto sociocultural, se tiende a leer el género a través del cuerpo, un cuerpo que es afectado por las normas sociales y que, muchas veces, impide la libre expresión de género.; wrapCount: 50" 
-    scale="10 10 1" position="-8.5048 7.85062 -19.123" rotation="0 -164 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: La transición es un proceso que refiere a aquellas personas cuya identidad de género difiere del sexo que se les asignó al nacer. La transición presenta un elemento desconocido en relación con lo que se considera “normal”, construido desde las estructuras heteronormativas. En nuestro contexto sociocultural, se tiende a leer el género a través del cuerpo, un cuerpo que es afectado por las normas sociales y que, muchas veces, impide la libre expresión de género.; wrapCount: 50" 
+        scale="10 10 1" position="-8.5048 7.85062 -19.123" rotation="0 -164 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Las personas trans enfrentan discriminación no solo por su identidad de género, sino también por cómo se percibe su sexualidad.; wrapCount: 50" 
-    scale="10 10 1" position="-8.59039 4.50226 -19.12276" rotation="0 -164 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Las personas trans enfrentan discriminación no solo por su identidad de género, sino también por cómo se percibe su sexualidad.; wrapCount: 50" 
+        scale="10 10 1" position="-8.59039 4.50226 -19.12276" rotation="0 -164 0"></a-entity>
 
-    <a-text value="Lía García" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" 
-    negate="false" scale="4 4 1" position="-20.64504 11.7 -9.57222" rotation="0 -118.30375258081725 0"></a-text>
+        <a-text value="Lía García" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" 
+        negate="false" scale="4 4 1" position="-20.64504 11.7 -9.57222" rotation="0 -118.30375258081725 0"></a-text>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Violencia de género" 
-    scale="20 20 1" position="-7.99865 15.523 38.56174" rotation="0 -96.96900000000001 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Violencia de género" 
+        scale="20 20 1" position="-7.99865 15.523 38.56174" rotation="0 -96.96900000000001 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: La violencia de género es cualquier agresión de tipo físico, psicológico, económico o sexual a una persona por razón de su género, afectando su identidad y su salud. La violencia de género está impulsada por un sistema de desigualdad de género, principalmente por las relaciones de poder y dominio entre mujeres y hombres en un sistema patriarcal.; wrapCount: 60" 
-    scale="15 15 1" position="-7.32034 12.39457 32.54907" rotation="0 -96.96900000000001 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: La violencia de género es cualquier agresión de tipo físico, psicológico, económico o sexual a una persona por razón de su género, afectando su identidad y su salud. La violencia de género está impulsada por un sistema de desigualdad de género, principalmente por las relaciones de poder y dominio entre mujeres y hombres en un sistema patriarcal.; wrapCount: 60" 
+        scale="15 15 1" position="-7.32034 12.39457 32.54907" rotation="0 -96.96900000000001 0"></a-entity>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Las mujeres no deben ser objeto de discriminación o agresión que afecte su identidad, salud o derechos humanos, causando cualquier tipo de sufrimiento. Se aboga por una sociedad que impulse la igualdad de géneros, por el respeto y, sobre todo, por la seguridad de las mujeres y niñas.; wrapCount: 60" 
-    scale="15 15 1" position="-7.25628 8.40549 32.55569" rotation="0 -96.96900000000001 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Las mujeres no deben ser objeto de discriminación o agresión que afecte su identidad, salud o derechos humanos, causando cualquier tipo de sufrimiento. Se aboga por una sociedad que impulse la igualdad de géneros, por el respeto y, sobre todo, por la seguridad de las mujeres y niñas.; wrapCount: 60" 
+        scale="15 15 1" position="-7.25628 8.40549 32.55569" rotation="0 -96.96900000000001 0"></a-entity>
 
-    <a-text value="Ana Mendieta" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
-    color="black" negate="false" scale="4 4 1" position="-6.68634 5.881 28.64846" rotation="0 -96.96900000000001 0"></a-text>
+        <a-text value="Ana Mendieta" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" 
+        color="black" negate="false" scale="4 4 1" position="-6.68634 5.881 28.64846" rotation="0 -96.96900000000001 0"></a-text>
 
-    <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Fue una artista de origen cubano, reconocida sobre todo después de su muerte por sus obras que abordaban temas como la mujer, la tierra, la violencia, los estereotipos, la nacionalidad, entre otros.; wrapCount: 60" 
-    scale="15 15 1" position="-7.44488 3.52438 32.60396" rotation="0 -96.96900000000001 0"></a-entity>
+        <a-entity text="color: black; font: font\Mangiola-Regular-msdf.json; fontImage: font\Mangiola-Regular.png; negate: false; value: Fue una artista de origen cubano, reconocida sobre todo después de su muerte por sus obras que abordaban temas como la mujer, la tierra, la violencia, los estereotipos, la nacionalidad, entre otros.; wrapCount: 60" 
+        scale="15 15 1" position="-7.44488 3.52438 32.60396" rotation="0 -96.96900000000001 0"></a-entity>
     
 
     <!--entorno-->
@@ -126,73 +130,78 @@
             controls: checkpoint, gamepad, trackpad, keyboard, nipple;"
     position="-1 0 120">
 <a-entity camera
-          position="0 4.3 0"
+          position="0 5 0"
           look-controls="pointerLockEnabled: true">
   <a-cursor></a-cursor>
 </a-entity>
 </a-entity>
 
     <!--sistema de gestión assets-->
-       <a-assets>
-        <a-asset-item id="navmeshfinal" src="modelados/NavMesh2.glb"></a-asset-item>
+        <a-assets>
+            <a-asset-item id="navmeshfinal" src="modelados/NavMesh2.glb"></a-asset-item>
             <a-asset-item id="estructura" src="modelados/Galeria.glb"></a-asset-item>
-            <video id="Bonita" loop="true" src="video\bhm5.mp4"></video>
-            <video id="Novia" autoplay loop="true" src="assets\Obras\Ysn2.mp4"></video>
-            <img id="play" src="video\play.png">
-            <img id="pause" src="video\pause.png">
-       </a-assets>
+            <video id="Bonita" loop="true" src="video/bhm5.mp4"></video>
+            <video id="Novia" loop="true" src="assets/Obras/Ysn2.mp4"></video>
+            <img id="play" src="video/play.png">
+            <img id="pause" src="video/pause.png">
+            </a-assets>
 
     <!-- Entidad Video -->
         <a-entity>
             <a-video src="#Bonita" position="22.503 6.337 -29.69788" rotation="0 -35.073 0" scale="1.5 1.5 0" width="5" height="2.5"></a-video>
-            <a-box src="assets\Texturas\horna_rosaclaro1.jpg" height="3" width="5" depth="0.1" position="22.55046 6.337 -29.75184" rotation="0 -35.08277875365544 0" scale="1.66633 1.51137 1"></a-box>
+            <a-box src="assets/Texturas/horna_rosaclaro1.jpg" height="3" width="5" depth="0.1" position="22.55046 6.337 -29.75184" rotation="0 -35.08277875365544 0" scale="1.66633 1.51137 1"></a-box>
         </a-entity>
 
-       <!--- <a-entity>
-            <a-video src="#Novia" position="-30.63269 3.87814 -20.75003"  rotation="0 -35.073 0"  width="2.5" height="4"></a-video>
-            <a-box src="assets\Texturas\horna_rosaclaro1.jpg" height="3" width="5" depth="0.1" position="22.55046 6.337 -29.75184" rotation="0 -35.08277875365544 0" scale="1.66633 1.51137 1"></a-box>
-        </a-entity>-->
+        <a-entity>
+            <a-video src="#Novia" position="-10.12074 6.88679 -37.83307" rotation="0 13.901674983259165 0" width="3.5" height="6.5"></a-video>
+            <a-box src="assets/Texturas/horna_rosaclaro.jpg" height="3" width="5" depth="0.1" position="-10.14886 6.88679 -37.94671" rotation="0 13.901674983259165 0" scale="0.82208 2.37857 1"></a-box>
+        </a-entity>
+
 
     <!-- Audio -->
-    <a-entity id="ambi" geometry="primitive: plane" material="color: blue" position="0 0.87493 0" sound="autoplay: true; loop: true; src: audio\audio_ambiental.mp3; volume: 50"></a-entity>
+        <a-entity id="ambi" geometry="primitive: plane" material="color: blue" position="0 0.87493 0" sound="autoplay: true; loop: true; src: audio\audio_ambiental.mp3; volume: 50"></a-entity>
 
 
-    <!-- Control Buttons -->
-        <a-image id="playButton" src="#play" position="26.65366 4.91759 -26.71309" rotation="0 -42.65 0" width="0.5" height="0.5" play-video></a-image>
-        <a-image id="pauseButton" src="#pause" position="18.30347 4.91759 -32.54588" rotation="0.52 -30.99 0" width="0.5" height="0.5" pause-video></a-image>
+    <!-- Botones de Control para Bonita -->
+        <a-image src="#play" position="26.65366 4.91759 -26.71309" rotation="0 -42.65 0" width="0.5" height="0.5" play-video="videoId: #Bonita"></a-image>
+        <a-image src="#pause" position="18.30347 4.91759 -32.54588" rotation="0.52 -30.99 0" width="0.5" height="0.5" pause-video="videoId: #Bonita"></a-image>
+
+<!-- Botones de Control para Novia -->
+        <a-image src="#play" position="-12 4.5 -35" rotation="0 15 0" width="0.5" height="0.5" play-video="videoId: #Novia"></a-image>
+        <a-image src="#pause" position="-8 4.5 -38" rotation="0 15 0" width="0.5" height="0.5" pause-video="videoId: #Novia"></a-image>
        
     <!-- Nav mesh. --><!--en la position la y NO debes de ponerla a más de 0 o no va a funcionar el navmesh-->
-    <a-entity nav-mesh normal-material position="-1.6 0 -105.6" scale="6.5 0 6.5" gltf-model="modelados/NavMesh2.glb" visible="false"></a-entity>
-    <a-entity gltf-model="modelados/Galeria.glb" position="-1.27604 8.5 74.73343" scale="6.6 6.6 6.6" visible=""></a-entity>
+        <a-entity nav-mesh normal-material position="-1.6 0 -105.6" scale="6.5 0 6.5" gltf-model="modelados/NavMesh2.glb" visible="false"></a-entity>
+        <a-entity gltf-model="modelados/Galeria.glb" position="-1.27604 8.5 74.73343" scale="6.6 6.6 6.6" visible=""></a-entity>
 
     <!-- Monolito -->
-    <a-entity geometry="primitive: cylinder; radius: 8" position="0 -17.75393 0" rotation="0 89.20208025053248 0" material="side: double; src: assets\Texturas\musgo.jpg" scale="1 38.05491 1"></a-entity>
-       <a-entity geometry="primitive: circle; radius: 6.5" position="0 1.40466 0" rotation="-90 0 0" material="side: double; src: assets\Texturas\agua.jpg"></a-entity>
-       <a-entity geometry="depth: 0.1; height: 15; width: 6" position="0 8.90466 2" material="src: assets\Obras\Collage_origen.png" type:="" point=""></a-entity>
-       <a-entity geometry="depth: 0.1; height: 15; width: 6" position="1.8821 8.90466 -0.71684" material="src: assets\Obras\Patria_mía.png" type:="" point="" rotation="0 114.00943390631173 0"></a-entity>
-       <a-entity geometry="depth: 0.1; height: 15; width: 6" position="-1.18388 8.96265 -0.69881" material="src: assets\Obras\collage.jpg" type:="" point="" rotation="0 56.354409855682384 0" scale="1.10682 1 1"></a-entity>
+        <a-entity geometry="primitive: cylinder; radius: 8" position="0 -17.75393 0" rotation="0 89.20208025053248 0" material="side: double; src: assets\Texturas\musgo.jpg" scale="1 38.05491 1"></a-entity>
+        <a-entity geometry="primitive: circle; radius: 6.5" position="0 1.40466 0" rotation="-90 0 0" material="side: double; src: assets\Texturas\agua.jpg"></a-entity>
+        <a-entity geometry="depth: 0.1; height: 15; width: 6" position="0 8.90466 2" material="src: assets\Obras\Collage_origen.png" type:="" point=""></a-entity>
+        <a-entity geometry="depth: 0.1; height: 15; width: 6" position="1.8821 8.90466 -0.71684" material="src: assets\Obras\Patria_mía.png" type:="" point="" rotation="0 114.00943390631173 0"></a-entity>
+        <a-entity geometry="depth: 0.1; height: 15; width: 6" position="-1.18388 8.96265 -0.69881" material="src: assets\Obras\collage.jpg" type:="" point="" rotation="0 56.354409855682384 0" scale="1.10682 1 1"></a-entity>
 
 
     <!-- Pasillos -->
-       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="8.11036 -0.03467 14.71454" rotation="0 -144.67871876407443  " scale="5.95478 1 3.25834"></a-entity>
-       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="-4.55908 -0.01177 6.5232" rotation="0 -35.28216806636096 0" scale="5.955 -0.965 2.811"></a-entity>
+        <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="8.11036 -0.03467 14.71454" rotation="0 -144.67871876407443  " scale="5.95478 1 3.25834"></a-entity>
+        <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="-4.55908 -0.01177 6.5232" rotation="0 -35.28216806636096 0" scale="5.955 -0.965 2.811"></a-entity>
 
-       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="-10.45826 -0.03467 14.91681" rotation="0 145.13422021120343 0" scale="5.95478 1 3.25834"></a-entity>
-       <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="3.94856 -0.06178 8.86068" rotation="0 34.79744577168029 0" scale="5.955 -0.965 2.811"></a-entity>
+        <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="-10.45826 -0.03467 14.91681" rotation="0 145.13422021120343 0" scale="5.95478 1 3.25834"></a-entity>
+        <a-entity geometry="depth: 5; height: 0.4" material="src: assets\Texturas\musgo.jpg" position="3.94856 -0.06178 8.86068" rotation="0 34.79744577168029 0" scale="5.955 -0.965 2.811"></a-entity>
 
-       <a-entity gltf-model="modelados\arbustos.glb" position="6.63708 0.55546 52.87385" scale="2 2 2"></a-entity>
-       <a-entity gltf-model="modelados\arbustos.glb" position="6.56575 0.55546 95.22652" scale="2 2 2"></a-entity>
-       <a-entity gltf-model="modelados\arbustos.glb" position="6.56575 0.55546 61.66796" scale="2 2 2"></a-entity>
-       <a-entity gltf-model="modelados\arbustos.glb" position="6.56575 0.55546 70.25254" scale="2 2 2"></a-entity>
-       <a-entity gltf-model="modelados\arbustos.glb" position="6.56575 0.55546 78.58599" scale="2 2 2"></a-entity>
-       <a-entity gltf-model="modelados\arbustos.glb" position="6.56575 0.55546 86.91509" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="6.63708 0.55546 52.87385" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="6.56575 0.55546 95.22652" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="6.56575 0.55546 61.66796" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="6.56575 0.55546 70.25254" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="6.56575 0.55546 78.58599" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="6.56575 0.55546 86.91509" scale="2 2 2"></a-entity>
        
-       <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 53.60556" scale="2 2 2"></a-entity>
-       <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 95.22652" scale="2 2 2"></a-entity>
-       <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 61.66796" scale="2 2 2"></a-entity>
-       <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 70.25254" scale="2 2 2"></a-entity>
-       <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 78.58599" scale="2 2 2"></a-entity>
-       <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 86.91509" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 53.60556" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 95.22652" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 61.66796" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 70.25254" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 78.58599" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\arbustos.glb" position="-9.749 0.555 86.91509" scale="2 2 2"></a-entity>
        
 
 
@@ -242,15 +251,22 @@
         <a-entity>
             <a-image height="3" width="3" position="-42.06519 6.37166 -3.09606" src="assets\Obras\Ysn.jpg" rotation="0 83.75325161883835 0" scale="1.76831 2.00839 1"></a-image>
             <a-box height="5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-42.24205 6.40093 -3.0472" rotation="0 83.191180021815 0" scale="0.86113 1.39649 1"></a-box>
+        </a-entity>
 
-        <a-image height="3" width="3" position="-38.32148 6.37846 -14.88292" src="assets\Obras\Ysn1.jpg" rotation="0 61.32825647521306 0" scale="1.76478 2.00993 1"></a-image>
-        <a-box height="5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-38.345 6.40093 -14.95761" rotation="0 61.261793370977884 0" scale="0.86113 1.39649 1"></a-box>
+        <a-entity>
+            <a-image height="3" width="3" position="-38.32148 6.37846 -14.88292" src="assets\Obras\Ysn1.jpg" rotation="0 61.32825647521306 0" scale="1.76478 2.00993 1"></a-image>
+            <a-box height="5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-38.345 6.40093 -14.95761" rotation="0 61.261793370977884 0" scale="0.86113 1.39649 1"></a-box>
+        </a-entity>
 
-        <a-image height="3" width="3" position="-30.88133 6.4022 -25.98238" src="assets\Obras\TFES1.jpeg" rotation="0 47.412257547075626 0" scale="1.765 2.01 1"></a-image>
-        <a-box height="5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-31.0678 6.40093 -26.12932" rotation="0 44.49303758088408 0" scale="0.86113 1.39649 1"></a-box>
+        <a-entity>
+            <a-image height="3" width="3" position="-30.88133 6.4022 -25.98238" src="assets\Obras\TFES1.jpeg" rotation="0 47.412257547075626 0" scale="1.765 2.01 1"></a-image>
+            <a-box height="5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-31.0678 6.40093 -26.12932" rotation="0 44.49303758088408 0" scale="0.86113 1.39649 1"></a-box>
+        </a-entity>
 
-        <a-image height="3" width="3" position="-21.84616 6.1751 -33.12205" src="assets\Obras\TFES2.jpeg" rotation="0 34.25771952866705 0" scale="1.765 2.01 1"></a-image>
-        <a-box height="5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-21.90756 6.1751 -33.20687" rotation="0 33.63663327874524 0" scale="0.86113 1.39649 1"></a-box>
+        <a-entity>
+            <a-image height="3" width="3" position="-21.84616 6.1751 -33.12205" src="assets\Obras\TFES2.jpeg" rotation="0 34.25771952866705 0" scale="1.765 2.01 1"></a-image>
+            <a-box height="5" width="7.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-21.90756 6.1751 -33.20687" rotation="0 33.63663327874524 0" scale="0.86113 1.39649 1"></a-box>
+        </a-entity>
 
         <!-- Ana Mendieta -->
         <a-entity>
@@ -377,50 +393,62 @@
         
         <!--Lia García-->
         
-        <a-text value="Nombre:Tocar fondo es encontrar sirenas  
-        Tipo de documento: Video - 1:02
-        Obra: Performance
-        Artista: Lia Garcia
-        Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-22.63269 3.87814 -8.75003" rotation="0 -108.58008583965206 0"></a-text>
-        <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-23.0167 3.87814 -7.45135" rotation="0 -108.58008583965206 0" scale="1 0.59139 1"></a-box>
+        <a-entity>
+            <a-text value="Nombre:Tocar fondo es encontrar sirenas  
+            Tipo de documento: Video - 1:02
+            Obra: Performance
+            Artista: Lia Garcia
+            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-22.63269 3.87814 -8.75003" rotation="0 -108.58008583965206 0"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-23.0167 3.87814 -7.45135" rotation="0 -108.58008583965206 0" scale="1 0.59139 1"></a-box>
+        </a-entity>
+
+        <a-entity>
+            <a-text value="Nombre:Tocar fondo es encontrar sirenas  
+            Tipo de documento: fotografía
+            Obra: Performance
+            Artista: Lia Garcia
+            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-18.54417 4.42369 -34.87752" rotation="0 27.50598487084543 0"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-17.30752 4.48349 -35.66791" rotation="0 -154.38233198241005 0" scale="1.05767 0.591 1"></a-box>
+        </a-entity>
+
+        <a-entity>
+            <a-text value="Nombre:Tocar fondo es encontrar sirenas  
+            Tipo de documento: fotografía
+            Obra: Performance
+            Artista: Lia Garcia
+            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-28.28537 4.53926 -28.84163" rotation="0 45.44987709875255 0"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-27.3554 4.53933 -29.95395" rotation="0 -136.62866174248637 0" scale="1.05767 0.591 1"></a-box>
+        </a-entity>
+            
+
+
+        <a-entity>
+            <a-text value="Yo soy la novia y esta es mi historia trans 
+            Tipo de documento: Video - 1:04 min
+            Obra: Performance
+            Artista: Lia Garcia
+            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-25.63269 3.87814 -8.75003" rotation="0 -108.58008583965206 0"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-26.0167 3.87814 -7.45135" rotation="0 -108.58008583965206 0" scale="1 0.59139 1"></a-box>
+        </a-entity>
+
+        <a-entity>
+            <a-text value="Yo soy la novia y esta es mi historia trans 
+            Tipo de documento: fotografía
+            Obra: Performance
+            Artista: Lia Garcia
+            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-36.39698 4.15592 -18.45742" rotation="0 65.92165911877686 0"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-35.8877 4.11508 -20.05274" rotation="0 -116.36314452870916 0" scale="1.31272 0.59139 1"></a-box>
+        </a-entity>
        
-        <a-text value="Nombre:Tocar fondo es encontrar sirenas  
-        Tipo de documento: fotografía
-        Obra: Performance
-        Artista: Lia Garcia
-        Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-18.54417 4.42369 -34.87752" rotation="0 27.50598487084543 0"></a-text>
-        <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-17.30752 4.48349 -35.66791" rotation="0 -154.38233198241005 0" scale="1.05767 0.591 1"></a-box>
 
-     <a-text value="Nombre:Tocar fondo es encontrar sirenas  
-        Tipo de documento: fotografía
-        Obra: Performance
-        Artista: Lia Garcia
-        Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-28.28537 4.53926 -28.84163" rotation="0 45.44987709875255 0"></a-text>
-        <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-27.3554 4.53933 -29.95395" rotation="0 -136.62866174248637 0" scale="1.05767 0.591 1"></a-box>
-
-
-               
-        <a-text value="Yo soy la novia y esta es mi historia trans 
-        Tipo de documento: Video - 1:04 min
-        Obra: Performance
-        Artista: Lia Garcia
-        Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-25.63269 3.87814 -8.75003" rotation="0 -108.58008583965206 0"></a-text>
-        <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-26.0167 3.87814 -7.45135" rotation="0 -108.58008583965206 0" scale="1 0.59139 1"></a-box>
-
-        <a-text value="Yo soy la novia y esta es mi historia trans 
-        Tipo de documento: fotografía
-        Obra: Performance
-        Artista: Lia Garcia
-        Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-36.39698 4.15592 -18.45742" rotation="0 65.92165911877686 0"></a-text>
-        <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-35.8877 4.11508 -20.05274" rotation="0 -116.36314452870916 0" scale="1.31272 0.59139 1"></a-box>
-       
-        <a-text value="Yo soy la novia y esta es mi historia trans 
-        Tipo de documento: fotografía
-        Obra: Performance
-        Artista: Lia Garcia
-        Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-41.03237 4.28735 -7.21462" rotation="0 78.55709737479691 0"></a-text>
-        <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-41.21344 4.2218 -8.76107" rotation="0 -105.07129230227088 0" scale="1.39323 0.59139 1"></a-box>
-        
+        <a-entity>
+            <a-text value="Yo soy la novia y esta es mi historia trans 
+            Tipo de documento: fotografía
+            Obra: Performance
+            Artista: Lia Garcia
+            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-41.03237 4.28735 -7.21462" rotation="0 78.55709737479691 0"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-41.21344 4.2218 -8.76107" rotation="0 -105.07129230227088 0" scale="1.39323 0.59139 1"></a-box>
+        </a-entity>
 
     <!-- Decoración -->
     <a-image height="4" width="3" position="10.8771 6.37891 18.97542" src="decoración\glicemia_png.png" rotation="0 35.88262783565806 0" scale="1.37712 0.91717 0"></a-image>
