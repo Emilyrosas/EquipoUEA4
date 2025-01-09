@@ -162,8 +162,8 @@
         </a-entity>
 
         <a-entity>
-            <a-video src="#Sirena" position="-17.46362 6.44326 -13.85616" rotation="0 -135.6741140557984  0" width="3.5" height="6.5"></a-video>
-            <a-box src="assets/Texturas/horna_rosaclaro.jpg" height="3" width="5" depth="0.1" position="-17.56893 6.45494 -13.65018" rotation="0 -135.6741140557984 0" scale="0.82208 2.37857 1"></a-box>
+            <a-video src="#Sirena" position="-17.24177 6.45494 -14.28348" rotation="0 -135.6741140557984 0" width="3.5" height="6.5"></a-video>
+            <a-box src="assets/Texturas/horna_rosaclaro.jpg" height="3" width="5" depth="0.1" position="-17.09796 6.45494 -14.13624" rotation="0 -135.6741140557984 0" scale="0.82208 2.37857 1"></a-box>
         </a-entity>
 
 
@@ -176,8 +176,13 @@
         <a-image src="#pause" position="18.30347 4.91759 -32.54588" rotation="0.52 -30.99 0" width="0.5" height="0.5" pause-video="videoId: #Bonita"></a-image>
 
 <!-- Botones de Control para Novia -->
-        <a-image src="#play" position="-12 4.5 -35" rotation="0 15 0" width="0.5" height="0.5" play-video="videoId: #Novia"></a-image>
-        <a-image src="#pause" position="-8 4.5 -38" rotation="0 15 0" width="0.5" height="0.5" pause-video="videoId: #Novia"></a-image>
+        <a-image src="#play" position="-12.84941 4.67796 -37.42077" height="0.5" width="0.5" rotation="0 13.66160566709935 0" play-video="videoId: #Novia"></a-image>
+        <a-image src="#pause" position="-7.532 4.67796 -38.79448" height="0.5" width="0.5" rotation="0 7.305211887917996 0" pause-video="videoId: #Novia"></a-image>
+
+<!-- Botones de Control para Sirena -->
+        <a-image src="#play" position="-14.93884 4.07325 -15.67732" height="0.5" width="0.5" rotation="0 38.76117 0" play-video="videoId: #Sirena"></a-image>
+        <a-image src="#pause" position="-19.035 4.01627 -12.01783" height="0.5" width="0.5" rotation="0 38.76116779839532 0" pause-video="videoId: #Sirena"></a-image>
+
        
     <!-- Nav mesh. --><!--en la position la y NO debes de ponerla a más de 0 o no va a funcionar el navmesh-->
         <a-entity nav-mesh normal-material position="-1.6 0 -105.6" scale="6.5 0 6.5" gltf-model="modelados/NavMesh2.glb" visible="false"></a-entity>
@@ -298,9 +303,9 @@
             <a-box height="6.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro1.jpg" position="-24.18185 6.50635 35.88197" rotation="0 -34.84041760631509 0" scale="0.95794 1.04847 1"></a-box>
         </a-entity>
 
-        <a-entity>
-            <a-image height="4" width="3" position="-22.08365 5.84813 9.9608" scale="1.5 1.5 0" src="assets\Obras\rp1.jpg" rotation="0 111.65 0"></a-image>
-            <a-box height="6.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro.jpg" position="-21.814 5.848 9.87" rotation="0 111.65 0" scale="1 1.06 1"></a-box>
+        <a-entity position="13.08767 0 29.18236" rotation="0 -17.44083528378226 0">
+            <a-image height="4" width="3" position="-18.49943 7.40865 9.97134" scale="1.5 1.5 0" src="assets\Obras\rp1.jpg" rotation="0 101.98304978651575 0"></a-image>
+            <a-box height="6.5" width="5.5" depth="0.1" src="assets\Texturas\horna_rosaclaro.jpg" position="-18.44977 7.442 9.93875" rotation="0 101.983 0" scale="1 1.06 1"></a-box>
         </a-entity>
 
 
@@ -391,13 +396,13 @@
             <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.00999 0.088" scale="1.04454 0.36533 0.057" rotation="0 0.030939720937064454 0"></a-box>
         </a-entity>
 
-        <a-entity position="-19.20086 0.38732 13.3507" scale="1.145 1.29275 7.765" rotation="0 -62.56584531269563 0">
+        <a-entity position="-6.14159 1.43237 27.78225" scale="1.145 1.29275 7.765" rotation="0 -96.87856878969524 0">
             <a-text value="Nombre: Rape Scene
             Tipo de documento: Conjunto de 5 fotografías en color - 50.8x40.6 cm
             Artistas: Ana Mendieta
             Año: 1973
             Créditos: The Estate of Ana Mendieta Collection, LLC, and Galerie Lelong, New York" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-1.01682 3.03822 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.00999 0.088" scale="1.05526 0.64851 0.057" rotation="0 0.030939720937064454 0"></a-box>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.01 0.088" scale="1.055 0.649 0.057" rotation="0 0.031 0"></a-box>
         </a-entity>
         
         <!--Lia García-->
@@ -460,25 +465,57 @@
         </a-entity>
 
     <!-- Decoración -->
-    <a-image height="4" width="3" position="10.8771 6.37891 18.97542" src="decoración\glicemia_png.png" rotation="0 35.88262783565806 0" scale="1.37712 0.91717 0"></a-image>
-    <a-entity gltf-model="modelados\árbol1.glb" position="-74.62503 -1.62584 31.79382" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol2.glb" position="54.337 -1.291 110.30925" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol4.glb" position="-53.87655 -1.34208 59.47689" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol4.glb" position="73.55245 -1.34208 -45.22181" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol4.glb" position="-28.23876 -1.34208 -83.19711" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol4.glb" position="-109.7191 -1.34208 -2.05769" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol3.glb" position="53.28349 0 54.79376" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol3.glb" position="-114.33294 0 -91.68511" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol3.glb" position="-114.33294 0 -91.68511" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol3.glb" position="-114.33294 0 -91.68511" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol3.glb" position="-129.23645 0 105.56303" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol3.glb" position="117.74028 0 -5.74647" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol1.glb" position="-74.62503 -1.62584 159.2505" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol1.glb" position="122.92201 -1.626 100.251" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol1.glb" position="100.44195 -1.626 -66.09125" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol1.glb" position="-5.59243 -1.626 -77.29975" scale="2 2 2"></a-entity>
-    <a-entity gltf-model="modelados\árbol4.glb" position="9.27979 -2.862 -23.31237" scale="1.5 1.5 1.5"></a-entity>
-    <a-entity gltf-model="modelados\árbol1.glb" position="-14.87973 -1.626 29.32473" scale="1.2 1.2 1.2"></a-entity>
+        
+        <a-entity gltf-model="modelados\árbol1.glb" position="-74.62503 -1.62584 31.79382" scale="2 2 2"></a-entity>
+        <!--<a-entity gltf-model="modelados\árbol2.glb" position="54.337 -1.291 110.30925" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol4.glb" position="-53.87655 -1.34208 59.47689" scale="2 2 2"></a-entity>-->
+        <a-entity gltf-model="modelados\árbol4.glb" position="73.55245 -1.34208 -45.22181" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol4.glb" position="-28.23876 -1.34208 -83.19711" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol4.glb" position="-109.7191 -1.34208 -2.05769" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol3.glb" position="53.28349 0 54.79376" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol3.glb" position="-114.33294 0 -91.68511" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol3.glb" position="-114.33294 0 -91.68511" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol3.glb" position="-114.33294 0 -91.68511" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol3.glb" position="-129.23645 0 105.56303" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol3.glb" position="117.74028 0 -5.74647" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol1.glb" position="-74.62503 -1.62584 159.2505" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol1.glb" position="122.92201 -1.626 100.251" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol1.glb" position="100.44195 -1.626 -66.09125" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="modelados\árbol1.glb" position="-5.59243 -1.626 -77.29975" scale="2 2 2"></a-entity>
+        <!--<a-entity gltf-model="modelados\árbol4.glb" position="9.27979 -2.862 -23.31237" scale="1.5 1.5 1.5"></a-entity>
+        <a-entity gltf-model="modelados\árbol1.glb" position="-14.87973 -1.626 29.32473" scale="1.2 1.2 1.2"></a-entity>-->
+        
+        <a-image position="6.55191 1.36541 5.16505" src="decoración\hierva_png.png" rotation="0 48.5364007411223 0" scale="4.61429 4.5268 2.34459"></a-image>
+        <a-image position="-6.63027 1.62488 4.99395" src="decoración\hierva_png.png" rotation="0 123.447 0" scale="4.614 4.527 2.345"></a-image>
+        <a-image position="-54.42878 10.55427 78.23983" src="decoración\arbol_png.png" rotation="0 35.88262783565806 0" scale="24.55542 24.02202 4.49542"></a-image>
+        <a-image position="48.79272 10.55427 93.47252" src="decoración\arbol_png.png" rotation="0 88.083093676642 0" scale="24.55542 24.02202 4.49542"></a-image>
+        <a-image position="8.80091 7.84909 -9.73163" src="decoración\arbol_1_png.png" rotation="0 -19.170021909487083 0" scale="11.3914 20.90409 1"></a-image>
+        <a-image position="-14.86532 7.84909 5.72696" src="decoración\arbol_1_png.png" rotation="0 63.724365974450166 0" scale="11.3914 20.90409 1"></a-image>
+        <a-image position="8 8.14725 5" src="decoración\mariposa_png.png" rotation="0 35.88262783565806 0"></a-image>
+        <a-image position="11.54105 1.85201 6.57321" src="decoración\mariposa_png.png" rotation="0 128.1030497509397 0"></a-image>
+        <a-image position="-8.76945 5.15584 6.22362" src="decoración\mariposa_png.png" rotation="0 54.04768177248568 0"></a-image>
+        <a-image position="-8.18193 10.69296 -3.32203" src="decoración\mariposa_png.png" rotation="0 -46.530475500369285 0"></a-image>
+        <a-image position="12.06902 8.147 -4.06712" src="decoración\mariposa_png.png" rotation="0 35.883 0"></a-image>
+        <a-image position="-0.32529 2.90147 -14.97748" src="decoración\mariposa_png.png" rotation="0 -30.31175919360107 0"></a-image>
+        <a-image position="-8.18193 21.7636 -3.32203" src="decoración\mariposa_png.png" rotation="0 -1.9199815714833885 0"></a-image>
+        <a-image position="5.81559 21.7636 -7.95135" src="decoración\mariposa_png.png" rotation="0 -77.55728602229362 0"></a-image>
+        <a-image position="4.10537 19.31138 -6.06922" src="decoración\mariposa_png.png" rotation="0 -77.55728602229362 0"></a-image>
+        <a-image position="5.59925 21.52693 8.95538" src="decoración\mariposa_png.png" rotation="0 69.72323408946988 0"></a-image>
+        <a-image position="-1.28822 26.49297 12.39403" src="decoración\mariposa_png.png" rotation="0 151.42415088614962 0"></a-image>
+
+
+        <a-image position="5.0925 6.56617 44.3911" src="decoración\enredaderas_png.png" scale="7.39575 12.95466 1" rotation="0 -90 0"></a-image>
+        <a-image position="5.25262 6.56617 48.46898" src="decoración\enredaderas_png.png" scale="7.39575 12.95466 1" rotation="0 90 0"></a-image>
+        <a-image position="-7.68497 6.56617 48.46898" src="decoración\enredaderas_png.png" scale="7.39575 12.95466 1" rotation="0 90 0"></a-image>
+        <a-image position="-7.68497 6.56617 44.47462" src="decoración\enredaderas_png.png" scale="7.39575 12.95466 1" rotation="0 -90 0"></a-image>
+        <a-image position="-6.61437 8.4495 43.1031" src="decoración\enredaderas_png.png" scale="5.26779 8.90443 1" rotation=""></a-image>
+        <a-image position="1.63596 8.4495 43.1031" src="decoración\enredaderas_png.png" scale="5.26779 8.90443 1" rotation=""></a-image>
+        <a-image position="-0.21612 8.4495 43.1031" src="decoración\enredaderas_png.png" scale="4.13869 7.26414 1" rotation=""></a-image>
+        <a-image position="-7.26467 9.47824 43.1031" src="decoración\enredaderas_png.png" scale="4.13869 7.26414 1" rotation=""></a-image>
+        <a-image position="-3.87671 10.86626 43.1031" src="decoración\enredaderas_png.png" scale="5.80677 10.74537 1" rotation=""></a-image>
+        <a-image position="2.38826 10.86626 43.1031" src="decoración\enredaderas_png.png" scale="5.80677 10.74537 1" rotation=""></a-image>
+
+
 
 
 
