@@ -174,13 +174,18 @@
         </a-entity>
 
         <a-entity>
-            <a-video src="#Galeria" position="-10.24177 4.45494 100.28348" rotation="0 87.798 0" width="6" height="4"></a-video>
-            <a-box src="assets/Texturas/marco_cafe.jpg" height="5" width="7" depth="0.1" position="-10.6 4.45494 100.28348" rotation="0 87.798 0" ></a-box>
+            <a-video src="#Galeria" position="6.62341 4.5 91.20054" rotation="0 -45 0" width="6" height="4"></a-video>
+            <a-box src="assets/Texturas/marco_cafe.jpg" height="5" width="7" depth="0.1" position="6.86499 4.5 90.92099" rotation="0 -45 0" scale="1.08003 1.1264 1"></a-box>
         </a-entity>
 
+    <!-- Entidad Audio -->
+        <!--<a-entity id="ambi" geometry="primitive: plane" material="color: blue" position="0 0.87493 0" sound="autoplay: true; loop: true; src: audio\audio_ambiental.mp3; volume: 50"></a-entity>-->
+        <a-entity id="intro" geometry="primitive: plane" material="color: blue" position="0 -1 38" sound="src: audio\audio_introducción.mp3; autoplay: false"></a-entity>
 
-    <!-- Audio -->
-        <a-entity id="ambi" geometry="primitive: plane" material="color: blue" position="0 0.87493 0" sound="autoplay: true; loop: true; src: audio\audio_ambiental.mp3; volume: 50"></a-entity>
+        <!-- Botones para controlar el sonido -->
+        <a-image id="playSoundButton" src="#play" position="5.26525 4 43.95347" 
+         width="0.5" height="0.5" rotation="0 -90 0" scale="2 2 2"
+         onclick="document.querySelector('#intro').components.sound.playSound();"></a-image>
 
 
     <!-- Botones de Control para Bonita -->
@@ -223,8 +228,6 @@
         <a-entity gltf-model="modelados\arbustoenmaceta.glb" position="-9.749 0.555 53.30435" scale="2 2 2" rotation="0 90 0"></a-entity>
 
 
-    <!-- Piso
-    <a-entity geometry="primitive: ring; radiusInner: 23; radiusOuter: 40" position="-1.17464 0.683 2.76043" rotation="-90 0 0" material="side: double; src: assets\Texturas\piso.jpg"></a-entity>-->
 
     <!-- Obras y Marcos -->
 
@@ -322,30 +325,30 @@
             Artistas: Maris Bustamante|Polvo de
             Gallina Negra
             Año: 1984
-            Lugar estreno: Diferentes espacios museísticos, calles de la ciudad y televisión" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.794 0.731 2.235" position="-1.501 3.063 0.092"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 2.45 0.088" scale="1.392 0.951 0.057" rotation="0 0.048 0"></a-box>
+            Lugar estreno: Diferentes espacios museísticos, calles de la ciudad y televisión" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.794 0.731 2.235" position="-1.501 3.063 0.092"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 2.45 0.088" scale="1.392 0.951 0.057" rotation="0 0.048 0"></a-box>
         </a-entity>
 
         <a-entity position="17.9951 1.68795 38.83986" scale="0.8774 0.97064 7.765" rotation="0 -152.07846868818902 0">
             <a-text value="Performance Tres madres para un Desmadre, realizado en 1990
             durante la serie de acciones callejeras Madre sólo hay una organizada
-            por la Sociedad de  Espectáculos en la Colonia Narvarte" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-1.00764 3.05339 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="1.055 0.537 0.057" rotation="0 0.031 0"></a-box>
+            por la Sociedad de  Espectáculos en la Colonia Narvarte" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-1.00764 3.05339 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 3 0.088" scale="1.055 0.537 0.057" rotation="0 0.031 0"></a-box>
         </a-entity>
 
         <a-entity position="33.3986 1.54293 24.41495" scale="1.03334 1.10387 7.76502" rotation="0 -118.79191262226873 0">
             <a-text value="Durante un performance del mismo proyecto, pero esta vez ante un
             público en vivo en el Museo
-            Carrillo Gil en la ciudad de México" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-0.84744 3.05092 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="0.94365 0.36178 0.057" rotation="0 0.030939720937064454 0"></a-box>
+            Carrillo Gil en la ciudad de México" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.84744 3.05092 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 3 0.088" scale="0.94365 0.36178 0.057" rotation="0 0.030939720937064454 0"></a-box>
         </a-entity>
 
         <a-entity position="38.26237 0.97893 13.49562" scale="0.83277 1.24807 7.765" rotation="0 -104.77163537541747 0">
             <a-text value="Nombre: El pene como instrumento de trabajo
             Tipo de documento: Obras
             Artistas: Maris Bustamante
-            Año: 1982" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-0.98354 3.03822 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="1.046 0.438 0.057" rotation="0 0.031 0"></a-box>
+            Año: 1982" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.98354 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 3 0.088" scale="1.046 0.438 0.057" rotation="0 0.031 0"></a-box>
         </a-entity>
 
         <!-- Maria Eugenia -->
@@ -354,8 +357,8 @@
             Tipo de documento: Videoperformance - 2:19 min
             Artistas: María Eugenia Chellet
             Año: 2012
-            Créditos: Dirección y edición de David Pablos" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-0.98354 3.03822 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="1.04621 0.62128 0.057" rotation="0 0.030939720937064454 0"></a-box>
+            Créditos: Dirección y edición de David Pablos" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.98354 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 3 0.088" scale="1.04621 0.62128 0.057" rotation="0 0.030939720937064454 0"></a-box>
         </a-entity>
 
         <a-entity position="35.23972 0.91013 -15.74749" scale="1.145 1.379 7.765" rotation="0 -63.079788454927986 0">
@@ -363,16 +366,16 @@
             Tipo de documento: Videoperformance - 2:19 min
             Artistas: María Eugenia Chellet
             Año: 2012
-            Créditos: Dirección y edición de David Pablos" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-0.98354 3.03822 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="1.04621 0.62128 0.057" rotation="0 0.030939720937064454 0"></a-box>
+            Créditos: Dirección y edición de David Pablos" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.98354 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 3 0.088" scale="1.04621 0.62128 0.057" rotation="0 0.030939720937064454 0"></a-box>
         </a-entity>
 
         <a-entity position="4.36503 0.80158 -37.83484" scale="1.145 1.379 7.765" rotation="0 -7.105249617417338 0">
             <a-text value="Nombre: La maja soy yo
             Tipo de documento: Collage - 38x50cm
             Artistas: María Eugenia Chellet
-            Año: 1988" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.03822 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3 0.088" scale="1.00713 0.35615 0.057" rotation="0 0.030939720937064454 0"></a-box>
+            Año: 1988" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 3 0.088" scale="1.00713 0.35615 0.057" rotation="0 0.030939720937064454 0"></a-box>
         </a-entity>
 
         <!-- Ana Mendieta -->
@@ -380,24 +383,24 @@
             <a-text value="Nombre: Moffitt Building Piece
             Tipo de documento: Videoinstalación
             Artistas: Ana Mendieta
-            Año: 1973" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.05841 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.00999 0.088" scale="1.04454 0.34975 0.057" rotation="0 0.030939720937064454 0"></a-box>
+            Año: 1973" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.05841 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 3.00999 0.088" scale="1.04454 0.34975 0.057" rotation="0 0.030939720937064454 0"></a-box>
         </a-entity>
 
         <a-entity position="-34.1892 0.73398 27.02534" scale="1.145 1.379 7.765" rotation="0 123.77034290416044 0">
             <a-text value="Nombre: Moffitt Building Piece
             Tipo de documento: Videoinstalación
             Artistas: Ana Mendieta
-            Año: 1973" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.03822 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.00999 0.088" scale="1.04454 0.37549 0.057" rotation="0 0.030939720937064454 0"></a-box>
+            Año: 1973" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 3.00999 0.088" scale="1.04454 0.37549 0.057" rotation="0 0.030939720937064454 0"></a-box>
         </a-entity>
 
         <a-entity position="-19.9711 0.67007 39.18544" scale="1.145 1.379 7.765" rotation="0 153.17224511909376 0">
             <a-text value="Nombre: Moffitt Building Piece
             Tipo de documento: Videoinstalación
             Artistas: Ana Mendieta
-            Año: 1973" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.03822 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.00999 0.088" scale="1.04454 0.36533 0.057" rotation="0 0.030939720937064454 0"></a-box>
+            Año: 1973" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-0.96854 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 3.00999 0.088" scale="1.04454 0.36533 0.057" rotation="0 0.030939720937064454 0"></a-box>
         </a-entity>
 
         <a-entity position="-19.77918 1.64832 14.01003" scale="1.145 1.29275 7.765" rotation="0 -55.82556981077663 0">
@@ -405,68 +408,48 @@
             Tipo de documento: Conjunto de 5 fotografías en color - 50.8x40.6 cm
             Artistas: Ana Mendieta
             Año: 1973
-            Créditos: The Estate of Ana Mendieta Collection, LLC, and Galerie Lelong, New York" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-1.01682 3.03822 0.09185"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="0.439 3.01 0.088" scale="1.055 0.649 0.057" rotation="0 0.031 0"></a-box>
+            Créditos: The Estate of Ana Mendieta Collection, LLC, and Galerie Lelong, New York" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-1.01682 3.03822 0.09185"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="0.439 3.01 0.088" scale="1.055 0.649 0.057" rotation="0 0.031 0"></a-box>
         </a-entity>
         
         <!--Lia García-->
         
-        <!--<a-entity>
+        <a-entity position="7.42772 0 -33.19966" rotation="0 49.52074223315705 0">
             <a-text value="Nombre:Tocar fondo es encontrar sirenas  
             Tipo de documento: Video - 1:02
             Obra: Performance
             Artista: Lia Garcia
-            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-22.63269 3.87814 -8.75003" rotation="0 -108.58008583965206 0"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-23.0167 3.87814 -7.45135" rotation="0 -108.58008583965206 0" scale="1 0.59139 1"></a-box>
-        </a-entity>-->
-
-        <a-entity>
-            <a-text value="Nombre:Tocar fondo es encontrar sirenas  
-            Tipo de documento: fotografía
-            Obra: Performance
-            Artista: Lia Garcia
-            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-18.54417 4.42369 -34.87752" rotation="0 27.50598487084543 0"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-17.30752 4.48349 -35.66791" rotation="0 -154.38233198241005 0" scale="1.05767 0.591 1"></a-box>
-        </a-entity>
-
-        <a-entity>
-            <a-text value="Nombre:Tocar fondo es encontrar sirenas  
-            Tipo de documento: fotografía
-            Obra: Performance
-            Artista: Lia Garcia
-            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-28.28537 4.53926 -28.84163" rotation="0 45.44987709875255 0"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-27.3554 4.53933 -29.95395" rotation="0 -136.62866174248637 0" scale="1.05767 0.591 1"></a-box>
-        </a-entity>
-            
-
-
-       <!--- <a-entity>
-            <a-text value="Yo soy la novia y esta es mi historia trans 
-            Tipo de documento: Video - 1:04 min
-            Obra: Performance
-            Artista: Lia Garcia
-            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-25.63269 3.87814 -8.75003" rotation="0 -108.58008583965206 0"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-26.0167 3.87814 -7.45135" rotation="0 -108.58008583965206 0" scale="1 0.59139 1"></a-box>-->
+            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-13.19579 4.76668 -20.18109" rotation="0 -29.687999999999995 0"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="-11.80894 4.69881 -19.56469" rotation="0 -29.688381112498735 0" scale="1.10769 0.45559 1"></a-box>
         </a-entity>
 
         <a-entity>
             <a-text value="Yo soy la novia y esta es mi historia trans 
-            Tipo de documento: fotografía
+            Tipo de documento: Fotografía
             Obra: Performance
             Artista: Lia Garcia
-            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-36.39698 4.15592 -18.45742" rotation="0 65.92165911877686 0"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-35.8877 4.11508 -20.05274" rotation="0 -116.36314452870916 0" scale="1.31272 0.59139 1"></a-box>
+            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-28.50191 4.57482 -28.93811" rotation="0 40.19642707519803 0"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="-35.88828 4.70881 -20.566" rotation="0 -119.05100000000002 0" scale="1.0978 0.43832 1"></a-box>
         </a-entity>
-       
+        
+        <a-entity>
+            <a-text value="Yo soy la novia y esta es mi historia trans 
+            Tipo de documento: Fotografía
+            Obra: Performance
+            Artista: Lia Garcia
+            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-36.56788 4.7604 -19.18685" rotation="0 60.139942008111724 0"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="-27.38987 4.53933 -29.97811" rotation="0 -140.35002262186106 0" scale="1.06655 0.46572 1"></a-box>
+        </a-entity>
 
         <a-entity>
             <a-text value="Yo soy la novia y esta es mi historia trans 
-            Tipo de documento: fotografía
+            Tipo de documento: Fotografía
             Obra: Performance
             Artista: Lia Garcia
-            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="white" negate="false" scale="0.633 0.78043 2.23505" position="-41.03237 4.28735 -7.21462" rotation="0 78.55709737479691 0"></a-text>
-            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpeg" position="-41.21344 4.2218 -8.76107" rotation="0 -105.07129230227088 0" scale="1.39323 0.59139 1"></a-box>
+            Año: 2024" font="font\Mangiola-Regular-msdf.json" font-image="font\Mangiola-Regular.png" color="black" negate="false" scale="0.633 0.78043 2.23505" position="-41.47264 4.28052 -7.26792" rotation="0 75.39551626126503 0"></a-text>
+            <a-box height="3" width="3" depth="0.1" src="assets\Texturas\glitter_rosa.jpg" position="-41.21344 4.2218 -8.76107" rotation="0 -105.18015428334574 0" scale="1.12058 0.48257 1"></a-box>
         </a-entity>
+
 
     <!-- Decoración -->
         
@@ -660,8 +643,8 @@
         
 
         <!--Mapa y video de la arquitectura-->
-        <a-image src="assets/Texturas/Mapa de galeria.png" position="-9.9884 4.59562 90.37944" scale="5.512 4.331 0" rotation="0 87.798 0"></a-image>
-        <a-box height="1.5" width="3" depth="0.1" position="-10.14096 4.551 90.38578" src="assets/Texturas/marco_cafe.jpg" rotation="0 88.485 0" scale="2.54359 4.25417 1"></a-box>
+        <a-image src="assets/Texturas/Mapa de galeria.png" position="-9.9884 4.59562 90.37944" scale="5.512 4.331 0" rotation="0 45 0"></a-image>
+        <a-box height="1.5" width="3" depth="0.1" position="-10.12072 4.551 90.29852" src="assets/Texturas/marco_cafe.jpg" rotation="0 45 0" scale="2.544 4.254 1"></a-box>
 
 
     
